@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09131f" />
+      <stop offset="100%" stop-color="#192a42" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg5)" />
+
+  <text x="80" y="65" fill="#60a5fa" font-family="sans-serif" font-size="14" font-weight="700" letter-spacing="2">UK LEGAL COMPLIANCE ECOSYSTEM</text>
+  <text x="80" y="110" fill="#ffffff" font-family="sans-serif" font-size="34" font-weight="800">The MOT, Road Tax (VED) &amp; Insurance Triangle</text>
+  <text x="80" y="145" fill="#94a3b8" font-family="sans-serif" font-size="16">Interdependent legal requirements for driving legally on UK public highways</text>
+
+  <!-- Central Interconnected Pillars -->
+  <!-- Pillar 1: Valid MOT -->
+  <g transform="translate(100, 200)">
+    <rect width="300" height="230" rx="16" fill="#14213d" stroke="#3b82f6" stroke-width="2" />
+    <circle cx="50" cy="45" r="22" fill="#1e3a8a" />
+    <text x="50" y="52" fill="#93c5fd" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">1</text>
+    <text x="85" y="50" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">Valid MOT Certificate</text>
+    <text x="25" y="95" fill="#94a3b8" font-family="sans-serif" font-size="13">
+      <tspan x="25" dy="0">• Mandatory for cars over 3 yrs old</tspan>
+      <tspan x="25" dy="24">• Digital record logged in DVSA base</tspan>
+      <tspan x="25" dy="24">• Prerequisite to tax your car</tspan>
+      <tspan x="25" dy="24">• Expires strictly at 23:59:59</tspan>
+    </text>
+    <rect x="25" y="180" width="250" height="30" rx="6" fill="#1e40af" />
+    <text x="150" y="200" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Annual Roadworthiness Gate</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M420 315 H470" stroke="#60a5fa" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrow)" />
+
+  <!-- Pillar 2: DVLA Road Tax (VED) -->
+  <g transform="translate(490, 200)">
+    <rect width="300" height="230" rx="16" fill="#14213d" stroke="#10b981" stroke-width="2" />
+    <circle cx="50" cy="45" r="22" fill="#065f46" />
+    <text x="50" y="52" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">2</text>
+    <text x="85" y="50" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">DVLA Road Tax (VED)</text>
+    <text x="25" y="95" fill="#94a3b8" font-family="sans-serif" font-size="13">
+      <tspan x="25" dy="0">• Cannot tax vehicle without MOT</tspan>
+      <tspan x="25" dy="24">• VED does NOT transfer with sale</tspan>
+      <tspan x="25" dy="24">• Must declare SORN if kept off-road</tspan>
+      <tspan x="25" dy="24">• Direct debit or 6/12-month payment</tspan>
+    </text>
+    <rect x="25" y="180" width="250" height="30" rx="6" fill="#047857" />
+    <text x="150" y="200" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Mandatory Revenue Tax</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M810 315 H860" stroke="#34d399" stroke-width="3" stroke-dasharray="6,4" />
+
+  <!-- Pillar 3: Active Insurance -->
+  <g transform="translate(880, 200)">
+    <rect width="240" height="230" rx="16" fill="#14213d" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="45" cy="45" r="22" fill="#78350f" />
+    <text x="45" y="52" fill="#fde68a" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">3</text>
+    <text x="80" y="50" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">Motor Insurance</text>
+    <text x="20" y="95" fill="#94a3b8" font-family="sans-serif" font-size="13">
+      <tspan x="20" dy="0">• Invalidation clause if</tspan>
+      <tspan x="20" dy="24">  driven with dangerous MOT</tspan>
+      <tspan x="20" dy="24">• MID database live link</tspan>
+      <tspan x="20" dy="24">• Claims rejected on</tspan>
+      <tspan x="20" dy="24">  unroadworthy faults</tspan>
+    </text>
+    <rect x="20" y="180" width="200" height="30" rx="6" fill="#b45309" />
+    <text x="120" y="200" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Continuous Insurance</text>
+  </g>
+
+  <!-- Bottom ANPR & Enforcement Banner -->
+  <g transform="translate(100, 470)">
+    <rect width="1020" height="110" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5" />
+    <text x="40" y="40" fill="#a5b4fc" font-family="sans-serif" font-size="16" font-weight="bold">POLICE &amp; DVLA AUTOMATED ENFORCEMENT NETWORK (ANPR)</text>
+    <text x="40" y="70" fill="#cbd5e1" font-family="sans-serif" font-size="13">
+      Over 11,000 ANPR cameras scan 50+ million license plates daily across the UK. 
+      Driving without MOT triggers automatic alerts: <tspan fill="#f87171" font-weight="bold">£1,000 non-endorsable fine</tspan> or up to <tspan fill="#ef4444" font-weight="bold">£2,500 + 3 penalty points</tspan> for driving a car deemed "dangerous".
+    </text>
+  </g>
+</svg>

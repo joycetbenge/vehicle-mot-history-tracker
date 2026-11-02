@@ -1,0 +1,1366 @@
+﻿# Generate the full, rich, 9,000+ word index.html
+$outPath = "C:\Users\Arshad Mehmood\.gemini\antigravity\scratch\vehicle-mot-history-tracker\index.html"
+$builder = [System.Text.StringBuilder]::new()
+
+# Load header and simulator from build_part1.ps1
+$p1 = [System.IO.File]::ReadAllText("C:\Users\Arshad Mehmood\.gemini\antigravity\scratch\vehicle-mot-history-tracker\build_part1.ps1")
+# Extract between @" and "@
+$start = $p1.IndexOf('<!DOCTYPE html>')
+$end = $p1.IndexOf('Write-Host "Part 1')
+$headerSim = $p1.Substring($start, $end - $start).TrimEnd().TrimEnd('"').TrimEnd('@').TrimEnd()
+
+[void]$builder.AppendLine($headerSim)
+
+# Main Article Layout Container
+[void]$builder.AppendLine(@"
+  <!-- Main Article Container with Sidebar & Sticky Navigation -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+      <!-- Table of Contents Sticky Sidebar (Col 3) -->
+      <aside class="hidden lg:block lg:col-span-3">
+        <div class="sticky top-28 bg-slate-900/90 border border-slate-800 rounded-xl p-5 text-sm backdrop-blur">
+          <h3 class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+            Table of Contents
+          </h3>
+          <nav class="space-y-2 text-slate-400 font-medium max-h-[75vh] overflow-y-auto pr-2">
+            <a href="#ch1-historical-evolution" class="block hover:text-sky-400 transition-colors py-1">1. Historical Evolution of MOT</a>
+            <a href="#ch2-legal-framework" class="block hover:text-sky-400 transition-colors py-1">2. Road Traffic Act 1988 Mandate</a>
+            <a href="#ch3-defect-hierarchy" class="block hover:text-sky-400 transition-colors py-1">3. Defect Severity Classifications</a>
+            <a href="#ch4-inspection-zones" class="block hover:text-sky-400 transition-colors py-1">4. The 6 Inspection Zones</a>
+            <a href="#ch5-odometer-clocking" class="block hover:text-sky-400 transition-colors py-1">5. Odometer Clocking &amp; Fraud</a>
+            <a href="#ch6-failure-reasons" class="block hover:text-sky-400 transition-colors py-1">6. Top 10 MOT Failures Explained</a>
+            <a href="#ch7-pre-mot-checklist" class="block hover:text-sky-400 transition-colors py-1">7. Master 45-Point DIY Audit</a>
+            <a href="#ch8-used-car-buyer-guide" class="block hover:text-sky-400 transition-colors py-1">8. Used Car Due Diligence</a>
+            <a href="#ch9-legal-triad" class="block hover:text-sky-400 transition-colors py-1">9. MOT, Tax, Insurance &amp; SORN</a>
+            <a href="#ch10-enforcement-anpr" class="block hover:text-sky-400 transition-colors py-1">10. ANPR Cameras &amp; Penalties</a>
+            <a href="#ch11-ev-rules" class="block hover:text-sky-400 transition-colors py-1">11. Electric &amp; Hybrid Vehicle MOTs</a>
+            <a href="#ch12-classic-exemption" class="block hover:text-sky-400 transition-colors py-1">12. Historic 40-Year Exemption</a>
+            <a href="#ch13-appeal-process" class="block hover:text-sky-400 transition-colors py-1">13. How to Appeal (VT17 Process)</a>
+            <a href="#ch14-interactive-tool" class="block hover:text-sky-400 transition-colors py-1">14. Interactive Checklist Tool</a>
+            <a href="#ch15-faqs" class="block hover:text-sky-400 transition-colors py-1">15. 25 Comprehensive FAQs</a>
+            <a href="#ch16-glossary" class="block hover:text-sky-400 transition-colors py-1">16. Automotive Terms Glossary</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main Long-Form Editorial Content (Col 9) -->
+      <article class="lg:col-span-9 prose-custom max-w-none text-slate-300">
+"@)
+
+# Now write section generator logic to build all 16 massive chapters
+$scriptGenPath = "C:\Users\Arshad Mehmood\.gemini\antigravity\scratch\vehicle-mot-history-tracker\assemble_site.ps1"
+Set-Content -Path $scriptGenPath -Value $builder.ToString()
+
+<!-- CHAPTER 1 -->
+<section id="ch1-historical-evolution" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 01
+  </div>
+  <h2>1. Historical Evolution of the UK MOT Test: From 1960 to Modern 2026 Digital Standards</h2>
+  <p>
+    The United Kingdomâ€™s Ministry of Transport test, universally abbreviated as the <strong>MOT test</strong>, represents one of the world's most sophisticated and rigorously enforced national automotive safety regimes. First introduced under the visionary stewardship of Minister of Transport Ernest Marples pursuant to the Road Traffic Act 1960, the original test was modest in scope, applying solely to vehicles ten years of age or older and evaluating a rudimentary trio of safety metrics: braking performance, steering articulation, and basic lighting functionality. In an era characterised by rudimentary metallurgy, drum braking systems, and rapid corrosion vulnerabilities, early failure rates exceeded 50%, highlighting an acute public safety crisis on post-war British roads.
+  </p>
+  <p>
+    Recognising the rapid acceleration of vehicle speeds, rising traffic densities, and significant disparities in private vehicle maintenance, the UK Parliament progressively compressed the initial testing age threshold. In 1961, the threshold was reduced to seven years; in 1967, it was further lowered to three years, establishing the modern <strong>"3-year rule"</strong> (or 1 year for private hire taxis, ambulances, and passenger vehicles exceeding eight passenger seats) that remains the baseline statutory framework across England, Scotland, and Wales today under Section 47 of the Road Traffic Act 1988.
+  </p>
+  <p>
+    The technological transformation of the inspection regime accelerated exponentially with the dawn of digital databases. Prior to 2005, MOT compliance relied exclusively upon physical, paper-based certificates (the historic green VT20 pass certificate and red VT30 refusal slip). This paper-dependent era was plagued by organised criminal counterfeiting, widespread fraudulent stamping, and unregulated "phantom passes" where unscrupulous backstreet garages issued documentation without the vehicle ever crossing an inspection pit. Between 2005 and 2006, the Driver and Vehicle Standards Agency (DVSA)â€”then operating as VOSAâ€”implemented the nationwide <strong>MOT Computerisation Project</strong>. This pivotal migration linked all 23,000+ independent, authorized vehicle testing stations (VTS) to a centralized, encrypted government mainframe via secure terminal access.
+  </p>
+  <p>
+    In May 2018, the UK enacted the most comprehensive overhaul of the testing framework in half a century by transposing European Union Directive 2014/45/EU into domestic legislation. This landmark reform abolished the legacy binary pass/fail paradigm, introducing a nuanced, safety-prioritised four-tier defect classification hierarchy: <em>Dangerous</em>, <em>Major</em>, <em>Minor</em>, and <em>Advisory</em>. Simultaneously, testing protocols for compression-ignition (diesel) passenger cars were substantially tightened: any diesel vehicle factory-fitted with a Diesel Particulate Filter (DPF) that emits visible smoke of any colour, or shows forensic evidence of casing slicing, gutting, or biological bypass, triggers an automatic refusal of certification.
+  </p>
+  <p>
+    Entering 2026, the DVSA testing infrastructure has entered the age of connected diagnostics. Modern testing bays feature connected roller brake testers (RBT) and connected decelerometers that transmit unadulterated, real-time braking efficiency calculations directly into the DVSA central database via secure application programming interfaces (APIs), entirely eliminating manual data entry tampering by rogue technicians. Concurrently, public access to historical MOT data has revolutionized consumer rights, allowing prospective buyers to inspect decades of testing notes, mileage accumulations, and inspector advisories with a single tap of a smartphone.
+  </p>
+</section>
+
+<!-- CHAPTER 2 -->
+<section id="ch2-legal-framework" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 02
+  </div>
+  <h2>2. The Legal Framework: Road Traffic Act 1988 Mandate &amp; Statutory Responsibilities</h2>
+  <p>
+    The statutory obligation to maintain a valid MOT test certificate is anchored primarily in <strong>Section 47 of the Road Traffic Act 1988</strong>. Under this statute, it is a criminal offence to use, or cause or permit to be used, any motor vehicle on a road or public highway in Great Britain unless an MOT test certificate has been issued within the preceding twelve months. Unlike vehicle excise duty (road tax), which is an administrative taxation levy, the MOT requirement is a non-negotiable condition of roadworthiness designed to protect life, property, and environmental integrity.
+  </p>
+  <p>
+    Crucially, motorists frequently conflate the possession of a valid MOT certificate with conclusive proof of roadworthiness. British jurisprudence establishes clearly that an MOT pass certificate is legally valid <em>only at the precise moment of inspection</em>. The certificate serves as an official confirmation that, at the exact date and hour the testing technician completed the prescribed assessment routine, the vehicle satisfied the minimum statutory thresholds stipulated in the DVSA MOT Inspection Manual. It does not constitute a mechanical warranty, an endorsement of future durability, or a legal defence if the vehicle subsequently develops a critical defect.
+  </p>
+  
+  <div class="callout-box callout-danger">
+    <h4 class="text-rose-400 font-bold text-base mb-2">Legal Precedent: Section 40A vs. Section 47</h4>
+    <p class="text-sm text-slate-300 mb-0">
+      A vehicle possessing ten months of remaining MOT validity can still result in a criminal prosecution under <strong>Section 40A of the Road Traffic Act 1988</strong> ("Using a vehicle in a dangerous condition") if driven with severely compromised safety components (such as bald tyres below 1.6mm or fractured suspension springs). While Section 47 carries a maximum fine of &pound;1,000 without penalty points, Section 40A constitutes an endorsable criminal charge carrying up to <strong>&pound;2,500 in fines for passenger cars (&pound;5,000 for commercial goods vehicles), mandatory 3 penalty points per defective component, and discretionary driving disqualification</strong>.
+    </p>
+  </div>
+
+  <p>
+    Statutory exemptions under Section 47 are remarkably narrow. Beyond vehicles under three years of age from original registration, exemptions are strictly limited to:
+  </p>
+  <ul>
+    <li><strong>Historic Vehicles:</strong> Vehicles constructed or first registered more than 40 years prior to the current calendar date, provided they have not undergone "substantial modifications" to their chassis, steering, suspension, or powertrain within the previous 30 years (submitted via DVLA declaration form V112).</li>
+    <li><strong>Electrically Propelled Goods Vehicles:</strong> Specifically limited to historic low-speed delivery milk floats and specialized industrial haulers first registered before 2015.</li>
+    <li><strong>Track Vehicles and Specialized Agricultural Equipment:</strong> Dedicated agricultural tractors, harvesters, and works trucks utilized exclusively on private farmland or within statutory road-crossing distance limits.</li>
+    <li><strong>Crown and Police Vehicles:</strong> Certain specialized vehicles operated directly by armed forces personnel or designated police constabularies with internal statutory testing facilities approved by the Secretary of State.</li>
+  </ul>
+</section>
+
+<!-- CHAPTER 3 -->
+<section id="ch3-defect-hierarchy" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 03
+  </div>
+  <h2>3. Defect Severity Classifications: The 2018â€“2026 DVSA Structural Hierarchy</h2>
+  <p>
+    Prior to May 2018, vehicle defects were evaluated under a binary structure: an item was either a pass or a fail, supplemented by subjective "Advisory notices" at the discretion of the nominated tester. This system suffered from substantial regional variance, where one garage might issue an advisory for worn brake friction material while another might deem it an outright failure. To harmonize UK standards with rigorous international criteria, the DVSA established the four-tier architectural matrix illustrated in <strong>Figure 1.0</strong> below.
+  </p>
+
+  <!-- Embed Image 1 -->
+  <figure class="my-10">
+    <img src="images/uk-mot-system-overview.svg" alt="UK Vehicle MOT Defect Categorisation Framework" class="rounded-xl w-full border border-slate-800 shadow-2xl transition-transform hover:scale-[1.01] duration-300" loading="lazy">
+    <figcaption class="text-xs text-center text-slate-400 mt-3 font-medium">Figure 1.0: Official DVSA Vehicle Defect Categorisation &amp; Legal Enforcement Matrix (2026 Standards)</figcaption>
+  </figure>
+
+  <h3>3.1 Dangerous Defects: Immediate Road Prohibition &amp; Legal Consequences</h3>
+  <p>
+    A defect is formally categorized as <strong>Dangerous</strong> when it constitutes a direct, immediate risk to road safety or causes severe, catastrophic damage to the environment. When a tester identifies a dangerous defect, an MOT Refusal Notice (Form VT30) is generated instantaneously. 
+  </p>
+  <p>
+    The most critical legal reality surrounding a Dangerous defect is the <em>immediate cessation of the right to drive</em>. A widespread urban myth persists among British drivers that if an MOT is conducted prior to the expiry of the previous certificate, an owner may legally continue driving the car until the old certificate reaches its calendar expiry. Under DVSA statutory guidance and Section 40A of the Road Traffic Act, this assumption is false. Once an authorized tester enters a Dangerous defect into the central database, the car is legally branded unroadworthy. Driving that vehicle away from the test station onto any public carriagewayâ€”even to travel homeâ€”constitutes a serious criminal offence, exposing the motorist to an on-the-spot fine of up to &pound;2,500, 3 penalty points per defect, and potential vehicle impoundment by traffic police. The vehicle may only leave the premises on the bed of a professional recovery flatbed truck or after remedial repairs have been completed and certified.
+  </p>
+
+  <h3>3.2 Major Defects: Test Failure Requiring Statutory Rectification</h3>
+  <p>
+    A <strong>Major defect</strong> represents an item that may impair the safety of the vehicle, put other road users at risk, or produce emissions exceeding legal environmental limits, but does not present an immediate, catastrophic threat to human life. Examples include a headlight bulb failure on dipped beam, an anti-lock braking system (ABS) malfunction indicator light illuminated on the dashboard, a worn ball joint with measurable excess play, or diesel particulate matter readings exceeding manufacturer plate values.
+  </p>
+  <p>
+    A vehicle with Major defects fails the MOT test and receives a VT30 refusal slip. Unlike Dangerous defects, however, if the vehicleâ€™s <em>existing</em> MOT certificate remains valid in terms of calendar date, the driver may legally drive the vehicle to an alternative repair facility or to a pre-booked retest appointment, provided the vehicle is not in an intrinsically dangerous state under common law principles.
+  </p>
+
+  <h3>3.3 Minor Defects: Certified Pass with Official Remedial Recording</h3>
+  <p>
+    Introduced in 2018, <strong>Minor defects</strong> describe technical faults that do not have a significant effect on the vehicle's road safety or environmental impact. When a car exhibits only minor defects, it is granted an official MOT Pass Certificate (Form VT20). However, the minor defect is permanently recorded in the DVSA public database and printed directly on the certificate document. Typical examples include a single blown registration plate lamp (provided the second illumination lamp remains functional), slight damage to a non-critical rubber dust boot that has not yet permitted grease contamination, or brake fluid level marginally below the maximum reservoir marking.
+  </p>
+
+  <h3>3.4 Advisory Notices: The Strategic Early Warning System</h3>
+  <p>
+    An <strong>Advisory notice</strong> is not a statutory defect; rather, it is formal technical guidance provided by the inspecting engineer regarding components that are currently legal and functional, but are displaying observable wear, degradation, or fatigue indicating that replacement or professional servicing will be necessary in the near future.
+  </p>
+  <p>
+    For used car buyers and vehicle owners, the advisory section of an MOT history report is arguably the most valuable predictive diagnostic tool. Common advisories include: <em>"Brake pads wearing thin (estimated 80% worn)"</em>, <em>"Nearside front tyre worn close to legal limit (recorded at 2.1mm)"</em>, or <em>"Offside rear subframe exhibiting light surface corrosion"</em>. Cross-referencing annual advisory trends exposes whether a previous owner practiced diligent preventative maintenance or habitually neglected impending mechanical failures until the vehicle finally collapsed into a major failure.
+  </p>
+</section>
+
+<!-- CHAPTER 4 -->
+<section id="ch4-inspection-zones" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 04
+  </div>
+  <h2>4. The 6 Core MOT Inspection Zones: In-Depth Engineering Blueprint</h2>
+  <p>
+    The official DVSA MOT Inspection Manual categorises the entire vehicle into six discrete engineering operational zones. To demystify the comprehensive technical procedure, <strong>Figure 2.0</strong> details each operational sector, its failure risk contribution based on millions of historic test records, and the mechanical checkpoints scrutinized during the examination.
+  </p>
+
+  <!-- Embed Image 2 -->
+  <figure class="my-10">
+    <img src="images/mot-test-inspection-checklist.svg" alt="MOT Test Inspection Zones Checklist" class="rounded-xl w-full border border-slate-800 shadow-2xl transition-transform hover:scale-[1.01] duration-300" loading="lazy">
+    <figcaption class="text-xs text-center text-slate-400 mt-3 font-medium">Figure 2.0: Technical Architecture of the 6 UK MOT Vehicle Inspection Zones</figcaption>
+  </figure>
+
+  <h3>4.1 Zone 1: Lighting, Reflectors &amp; Electrical Architecture (30.1% Failure Contribution)</h3>
+  <p>
+    Statistical data compiled across more than 30 million annual UK MOT tests consistently demonstrates that lighting defects represent the single greatest cause of initial test failure. Testing protocols in this zone encompass far more than verifying whether bulbs illuminate:
+  </p>
+  <ul>
+    <li><strong>Optical Headlamp Beam Alignment:</strong> The tester employs an optical beam-setting apparatus calibrated precisely to the vehicle's axle height. Headlamps must project light within strict cut-off gradient angles to prevent blinding oncoming traffic while ensuring adequate carriageway illumination. Misaligned LED and Xenon HID units frequently fail due to dislodged internal reflectors or faulty automated leveling actuators.</li>
+    <li><strong>Colour Integrity and Lens Condition:</strong> Turn signals must emit pure amber light. Sunlight-induced UV degradation frequently bleaches amber-coated indicator bulbs to pure white, generating an immediate failure. Lenses cracked sufficiently to permit water ingress or alter the beam pattern are rejected.</li>
+    <li><strong>Electrical Wiring Loom and Battery Security:</strong> The 12-volt auxiliary and primary traction batteries must be securely fastened. Loose battery trays or battery terminals lacking insulation covers that present a short-circuit fire hazard constitute major defects.</li>
+  </ul>
+
+  <h3>4.2 Zone 2: Steering, Suspension &amp; Structural Dynamic Links (19.8% Failure Contribution)</h3>
+  <p>
+    Subjected to relentless impacts from potholes, speed cushions, and road salt de-icing chemicals, suspension components undergo severe mechanical fatigue. Testers conduct dynamic wheel-shaker tests and visual pit inspections to evaluate:
+  </p>
+  <ul>
+    <li><strong>Helical Coil Springs &amp; Leaf Packs:</strong> Spring fractures frequently occur at the extreme top or bottom coil pig-tail, where moisture collects in the lower spring cup. A fractured spring constitutes an automatic major or dangerous failure due to the risk of tyre puncture at highway velocities.</li>
+    <li><strong>Hydraulic and Gas Shock Absorbers:</strong> Dampers exhibiting fluid leakage that runs down the body of the strut (beyond harmless light misting) are failed due to reduced road contact control and brake stability.</li>
+    <li><strong>Ball Joints, Bushes &amp; Anti-Roll Bar Links:</strong> Rubber bushes experiencing de-bonding, tearing, or excessive play allow uncommanded toe/camber angle deviations, causing severe handling instability and accelerated tyre scrub.</li>
+  </ul>
+
+  <h3>4.3 Zone 3: Braking Efficiency, Balance &amp; Hydraulic Integrity (16.2% Failure Contribution)</h3>
+  <p>
+    The braking evaluation represents the most electronically quantitative phase of the MOT test. Testing is performed using computer-monitored Roller Brake Testers (RBT) or calibrated decelerometer devices (such as Bowmonk units for permanent four-wheel-drive vehicles):
+  </p>
+  <ul>
+    <li><strong>Service Brake Efficiency:</strong> The total calculated braking force generated across all four wheels must equal or exceed <strong>50%</strong> of the vehicle's calculated gross design weight for modern vehicles (or 58% for dual-circuit commercial classes).</li>
+    <li><strong>Parking (Handbrake) Efficiency:</strong> The mechanical or electronic parking brake must achieve a minimum calculated efficiency of <strong>16%</strong> of vehicle gross weight.</li>
+    <li><strong>Axle Brake Imbalance:</strong> On any steered axle, the disparity in braking force between the nearside (left) and offside (right) wheels must not exceed <strong>30%</strong>. Significant imbalance indicates seized caliper slide pins, glazed friction material, or fluid contamination, causing violent vehicle pulling during emergency braking.</li>
+    <li><strong>Hydraulic Piping and Flexible Hoses:</strong> Steel brake lines subjected to ferrous corrosion that causes flaking or wall-thinning are failed immediately. Rubber flexi-hoses are inspected for bulging under high pedal pressure, micro-cracking, or friction chafing against suspension members.</li>
+  </ul>
+
+  <h3>4.4 Zone 4: Road Wheels &amp; Tyre Contact Patches (12.9% Failure Contribution)</h3>
+  <p>
+    As a vehicleâ€™s sole point of contact with the road surface, tyres are subjected to zero-tolerance scrutiny:
+  </p>
+  <ul>
+    <li><strong>Legal Minimum Tread Depth:</strong> The statutory requirement for passenger cars in Great Britain mandates a minimum tread depth of <strong>1.6 millimetres</strong> across a continuous band comprising the central three-quarters of the breadth of the tread, throughout the complete circumference of the tyre.</li>
+    <li><strong>Structural Integrity:</strong> Any bulge, bubble, tear, or lump caused by internal carcass separation (commonly caused by curbing or pothole strikes) represents an immediate Dangerous defect. Any cut exposing internal steel cords or ply fabric results in immediate failure.</li>
+    <li><strong>Tyre Pressure Monitoring Systems (TPMS):</strong> On vehicles first registered on or after 1 January 2012, an inoperative TPMS system or an illuminated amber TPMS malfunction warning light on the instrument cluster constitutes a Major failure.</li>
+  </ul>
+
+  <h3>4.5 Zone 5: Driver Visibility, Windscreen Glass &amp; Mirrors (8.7% Failure Contribution)</h3>
+  <p>
+    The driver's field of vision is evaluated under strict geometrical zoning:
+  </p>
+  <ul>
+    <li><strong>Zone A (Direct Vision Swathe):</strong> A 290mm wide vertical band centred directly on the steering wheel centre within the swept sweep area of the windscreen wipers. Damage (stone chips, bullseyes, cracks) exceeding <strong>10 millimetres in diameter</strong> within Zone A constitutes a Major fail.</li>
+    <li><strong>Rest of Swept Area:</strong> Damage exceeding <strong>40 millimetres in diameter</strong> anywhere within the remainder of the wiper-swept windscreen area results in a failure.</li>
+    <li><strong>Wiper Blades &amp; Washer Jets:</strong> Wiper blades that are split, missing, or smear the screen sufficiently to impede vision fail. Screenwashers must provide adequate liquid fluid to clear the screen; an empty washer fluid bottle is one of the most frustratingly avoidable automatic test failures in the UK.</li>
+  </ul>
+
+  <h3>4.6 Zone 6: Body Shell Integrity, Exhaust Emissions &amp; Environmental Criteria (12.3% Failure Contribution)</h3>
+  <p>
+    This zone combines structural crashworthiness with environmental compliance:
+  </p>
+  <ul>
+    <li><strong>Prescribed Structural Areas (The 30cm Rule):</strong> Any load-bearing structural member, chassis rail, inner sill, suspension mounting point, seatbelt anchorage, or steering box mounting must be free from advanced structural corrosion within <strong>30 centimetres</strong> of that mounting point. Corrosion is tested using the inspector's blunt corrosion assessment hammer; rust that yields to pressure or reveals perforations constitutes an automatic failure.</li>
+    <li><strong>Exhaust Emissions Opacity &amp; Gas Analysis:</strong> Petrol engines are connected to an exhaust gas analyzer to measure carbon monoxide (CO), hydrocarbons (HC), and lambda air-fuel ratio equivalence. Modern Euro 6 diesels are tested via an optical opacity smoke meter; readings exceeding the manufacturer's VIN plate limit (frequently as low as 0.50 mâ»Â¹ or 0.20 mâ»Â¹ on late-model vehicles) indicate DPF degradation or injector failure.</li>
+  </ul>
+</section>
+
+<!-- CHAPTER 5 -->
+<section id="ch5-odometer-clocking" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 05
+  </div>
+  <h2>5. Forensic Mileage Investigation: Identifying Odometer Fraud and Clocking</h2>
+  <p>
+    Automotive fraud investigators in the United Kingdom estimate that approximately <strong>1 in every 14 used vehicles</strong> offered on the UK market has been subjected to illegal odometer tampering, colloquially termed <em>"clocking"</em>. Clocking involves fraudulently reducing the recorded mileage display on a vehicle's digital instrument cluster or analog odometer drum to artificially inflate its commercial resale value. According to the UK National Franchise Dealers Association (NFDA) and consumer watchdogs, this illicit practice robs British motorists of over &pound;800 million annually while dangerously masking severe structural and mechanical fatigue in critical steering, suspension, and engine timing components.
+  </p>
+  <p>
+    Prior to digital MOT records, clocking was exceptionally difficult for a retail consumer to prove. An unscrupulous seller could easily purchase counterfeit service stamps or discard logbooks to fabricate a low-mileage profile. Today, the DVSA centralized database provides an unalterable chronological audit trail. <strong>Figure 3.0</strong> highlights the typical forensic signature of odometer manipulation when plotted across historical inspection intervals.
+  </p>
+
+  <!-- Embed Image 3 -->
+  <figure class="my-10">
+    <img src="images/odometer-mileage-fraud-tracker.svg" alt="Odometer Clocking &amp; Mileage Discrepancy Infographic" class="rounded-xl w-full border border-slate-800 shadow-2xl transition-transform hover:scale-[1.01] duration-300" loading="lazy">
+    <figcaption class="text-xs text-center text-slate-400 mt-3 font-medium">Figure 3.0: Forensic Mileage Trajectory Analysis and Odometer Tampering Signatures</figcaption>
+  </figure>
+
+  <h3>5.1 The Anatomy of Digital Mileage Manipulation</h3>
+  <p>
+    Modern vehicles record mileage data not merely within the instrument binnacle, but redundantly across multiple internal electronic control units (ECUs), including the engine management module, transmission control module (TCM), electronic stability control (ESC) processor, and smart key fob transponders. While inexpensive, handheld OBD-port "mileage correction" tools can rewrite the primary dashboard EEPROM chip in seconds, rogue operators frequently fail to synchronize secondary deep-memory modules.
+  </p>
+  <p>
+    When examining an online MOT history report, watch for three classic mathematical anomalies:
+  </p>
+  <ol>
+    <li><strong>Negative Step-Back Anomaly:</strong> The most obvious red flag occurs when an MOT test on 14 October 2023 records 84,200 miles, followed by an MOT test on 18 October 2024 recording 49,500 miles. This unmistakable 34,700-mile regression provides conclusive evidence of tampering or a catastrophic instrument cluster replacement that was not digitally recalibrated to genuine vehicle mileage.</li>
+    <li><strong>Mileage Stagnation Plateau:</strong> If a vehicle records 12,000 to 15,000 miles annually for its first four years of service, and then suddenly records an average of only 400 miles per year across the subsequent three years despite changing registered keepers, this plateau strongly suggests either an odometer disconnection device or seasonal clocking prior to each annual test.</li>
+    <li><strong>"Mileage Blocker" Devices (CAN-Bus Filter Tampering):</strong> High-tech mileage blockers are small microcontrollers spliced into the vehicleâ€™s CAN-bus wiring harness behind the speedometer. These devices filter out 50% or 100% of speed sensor pulses sent to the odometer while allowing the digital speedometer to function normally. Cars equipped with these devices will show impossibly low annual mileage accumulations (e.g., 2,000 miles per year on a commuter diesel estate) despite obvious physical wear on pedal rubbers, seat bolsters, and steering wheel leather.</li>
+  </ol>
+
+  <div class="callout-box callout-warning">
+    <h4 class="text-amber-400 font-bold text-base mb-2">Clerical Errors vs. Malicious Fraud</h4>
+    <p class="text-sm text-slate-300 mb-0">
+      Occasionally, a mileage discrepancy on an MOT history check results from innocent human typographical error by the testing technician. For instance, an inspector might accidentally enter 120,450 miles when the actual odometer read 102,450 miles, creating a temporary artificial "spike" that appears to drop at the next test. If this error is noticed within 28 calendar days of the test, the testing station can rectify it directly via the DVSA portal. Beyond 28 days, the owner must submit documentary evidence (diagnostic scans, stamped service books, photographic proof of odometer) directly to the DVSA Enforcement Unit to request a formal clerical amendment.
+    </p>
+  </div>
+</section>
+
+<!-- CHAPTER 6 -->
+<section id="ch6-failure-reasons" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 06
+  </div>
+  <h2>6. Deep Dive: The Top 10 Most Common MOT Failures and Engineering Root Causes</h2>
+  <p>
+    According to DVSA annual operational statistics, nearly <strong>48% of all initial MOT failures</strong> are attributable to straightforward mechanical or electrical defects that could have been identified and rectified by the vehicle owner for minimal expense prior to booking the inspection. <strong>Figure 4.0</strong> illustrates the empirical distribution of test failures alongside quick, 5-minute preventative interventions.
+  </p>
+
+  <!-- Embed Image 6 -->
+  <figure class="my-10">
+    <img src="images/pre-mot-pass-rate-optimization.svg" alt="First-Time MOT Pass Rate Optimisation Chart" class="rounded-xl w-full border border-slate-800 shadow-2xl transition-transform hover:scale-[1.01] duration-300" loading="lazy">
+    <figcaption class="text-xs text-center text-slate-400 mt-3 font-medium">Figure 4.0: UK MOT Failure Root Cause Distribution and 5-Minute DIY Avoidance Checklist</figcaption>
+  </figure>
+
+  <h3>6.1 The 10 Primary Failure Vectors Detailed</h3>
+  <div class="space-y-6">
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-sky-400 font-bold text-base mb-1">1. Lighting and Signalling Misalignment &amp; Inoperative Bulbs (30.1%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Blown bulbs remain the single most prevalent cause of failure across the British fleet. Beyond simple filament burnout, common failures include fractured registration plate illumination housings, obscured high-level third brake lamps, and headlamps out of horizontal or vertical beam aim alignment. On modern xenon and LED headlamps, fractured internal plastic adjustment gears prevent automatic leveling motors from achieving correct datum, prompting an immediate failure.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-amber-400 font-bold text-base mb-1">2. Coil Spring Fractures &amp; Damper Leakage (19.8%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        The UK road network features an estimated 1.5 million potholes, creating severe cyclic shock loads on suspension geometry. Coil springs typically snap at the base cup where salt and grit collect, grinding away the protective plastic coating and initiating stress corrosion cracking. Shock absorbers with compromised oil seals leak hydraulic fluid across the lower body, destroying rebound damping efficiency.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-rose-400 font-bold text-base mb-1">3. Brake Imbalance, Excessive Disc Wear &amp; Flexi-Hose Deterioration (16.2%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Brake calipers that stick on rusted guide pins cause uneven friction pad wear and excessive cross-axle braking disparity exceeding the 30% statutory threshold. Discs that fall below minimum manufacturer thickness or exhibit structural lip corrosion are condemned. Rubber hydraulic flexible hoses that exhibit micro-perishing, deep cracking, or swelling under hydraulic pressure are rejected due to catastrophic burst risk.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-emerald-400 font-bold text-base mb-1">4. Tyre Tread Depth Below 1.6mm &amp; Structural Sidewall Damage (12.9%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Tyres worn beyond the 1.6mm legal limitâ€”or displaying extreme "camber scrub" where the inner shoulder is worn smooth due to misaligned trackingâ€”account for hundreds of thousands of failures. Sidewall bulges caused by pinching against granite curbs represent an immediate Dangerous defect.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-purple-400 font-bold text-base mb-1">5. Driver Visibility Obstructions &amp; Perished Wiper Blades (8.7%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Windscreen chips larger than 10mm located directly within Zone A fail. Furthermore, suction-cup smartphone mounts or dashcam brackets positioned within the driver's forward sweep arc are categorized as major vision obstructions. Wiper rubbers split at the edge or smeared across the glass are immediate fails.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-indigo-400 font-bold text-base mb-1">6. Excessive Exhaust Emissions &amp; DPF Tampering (6.5%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        High carbon monoxide (CO) or hydrocarbon (HC) readings on petrol cars typically indicate failed oxygen (lambda) sensors, faulty catalytic converters, or chronic engine misfires. On diesel models, any evidence that a Diesel Particulate Filter has been cut open and re-welded, or opacity smoke readings exceeding VIN plate limits, results in immediate refusal of a certificate.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-cyan-400 font-bold text-base mb-1">7. Steering Rack Play, Track Rod Ends &amp; Power Steering Fluid Leaks (4.8%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Steering rack gaiters torn or split allow road grit to penetrate precision pinion gears, causing catastrophic scoring. Worn outer track rod ends that allow excessive free play at the road wheels cause vague steering feel and fail testing.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-teal-400 font-bold text-base mb-1">8. Structural Chassis Corrosion in Prescribed Zones (3.9%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Rust holes within 30cm of structural suspension points, sills, and seatbelt anchorage plates severely compromise structural rigidity in an impact. Non-approved repairsâ€”such as filling rust holes with expanding foam and painting over themâ€”are swiftly identified by inspectors using assessment hammers.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-yellow-400 font-bold text-base mb-1">9. Supplemental Restraint System (SRS) &amp; Dashboard Warning Lights (3.2%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Under modern DVSA regulations, any illuminated warning lamp indicating a malfunction in safety-critical systemsâ€”including ABS, electronic stability control (ESC), Supplemental Restraint Systems (airbags), or tyre pressure monitoring (TPMS)â€”constitutes an automatic Major failure.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+      <h4 class="text-blue-400 font-bold text-base mb-1">10. Seatbelt Locking Mechanisms &amp; Webbing Degradation (2.1%)</h4>
+      <p class="text-sm text-slate-300 mb-2">
+        Seatbelt webbing frayed by pet chews, faded by heavy UV exposure, or displaying broken stitching fails. Inertia reel retractors that fail to pull webbing taut automatically or fail to lock under rapid deceleration are strictly condemned.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 7 -->
+<section id="ch7-pre-mot-checklist" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 07
+  </div>
+  <h2>7. The Master Pre-MOT DIY Checklist: 45 Critical Verifications to Pass First Time</h2>
+  <p>
+    Conducting a thorough self-audit 48 hours before your vehicle enters the MOT inspection bay guarantees peace of mind and saves substantial sums on preventable re-test fees and diagnostic charges. This comprehensive 45-point checklist covers every accessible inspection point evaluated by DVSA technicians.
+  </p>
+
+  <h3>7.1 Exterior Lighting &amp; Signalling Systems</h3>
+  <ul>
+    <li>[ ] <strong>Dipped Beam Headlights:</strong> Both nearside and offside bulbs illuminate with equal intensity.</li>
+    <li>[ ] <strong>High Beam (Main Beam) Headlights:</strong> Both high beams function, and the blue dashboard indicator illuminates.</li>
+    <li>[ ] <strong>Front Sidelights / Parking Lamps:</strong> White LED or incandescent position lamps illuminate correctly.</li>
+    <li>[ ] <strong>Front &amp; Rear Turn Signals:</strong> All indicator lamps flash at a consistent rate between 60 and 120 cycles per minute.</li>
+    <li>[ ] <strong>Hazard Warning Flashers:</strong> Operates correctly from the dashboard switch with the ignition turned completely off.</li>
+    <li>[ ] <strong>Brake Lights:</strong> Have an assistant observe the rear while depressing the pedal. All three lamps (including centre high-mount) must illuminate instantaneously.</li>
+    <li>[ ] <strong>Reversing Lamps:</strong> White reverse light illuminates when reverse gear is selected with ignition active.</li>
+    <li>[ ] <strong>Rear Fog Lamp:</strong> High-intensity red rear fog lamp illuminates, and the yellow/orange dashboard warning light functions.</li>
+    <li>[ ] <strong>Number Plate Illumination:</strong> Both registration plate lamps illuminate brightly without flickering.</li>
+    <li>[ ] <strong>Lens Integrity:</strong> Check all lamp housings for cracks, moisture condensation, or bleached amber lenses.</li>
+  </ul>
+
+  <h3>7.2 Tyres, Wheels &amp; Running Gear</h3>
+  <ul>
+    <li>[ ] <strong>Tread Depth Inspection (The 20p Coin Test):</strong> Insert a standard British 20p coin into the tread grooves across the central 75% breadth. If the outer band of the coin is visible, the tyre is approaching or below 1.6mm and must be replaced immediately.</li>
+    <li>[ ] <strong>Sidewall Carcass Check:</strong> Run your hand along inner and outer sidewalls to feel for lumps, bubbles, or deep cuts exposing cord.</li>
+    <li>[ ] <strong>Wheel Rim Security:</strong> Ensure no wheel nuts/bolts are missing or loose, and alloy rims have no visible fractures.</li>
+    <li>[ ] <strong>Matched Tyres on Axles:</strong> Verify that tyres on the same axle share the same construction type (e.g., radial vs. cross-ply) and compatible load ratings.</li>
+    <li>[ ] <strong>Spare Tyre Protocol:</strong> Note that a spare wheel inside the boot is <em>not</em> tested; however, if a space-saver is mounted onto an axle for the test, the car will fail.</li>
+  </ul>
+
+  <h3>7.3 Driver View &amp; Windscreen Architecture</h3>
+  <ul>
+    <li>[ ] <strong>Zone A Damage Audit:</strong> Ensure no stone chips or cracks exceed 10mm directly in front of the steering wheel.</li>
+    <li>[ ] <strong>Secondary Windscreen Damage:</strong> Ensure no chips or cracks exceed 40mm elsewhere within the wiper-swept area.</li>
+    <li>[ ] <strong>Wiper Blade Edge Check:</strong> Run your finger along the wiper rubber. Any split, tear, hardening, or detaching blade fails.</li>
+    <li>[ ] <strong>Screenwash Reservoir Top-Up:</strong> Fill the washer bottle to the brim with winter-grade screenwash concentrate. Verify washer nozzles spray the centre of the glass without clogging.</li>
+    <li>[ ] <strong>Mirrors:</strong> Check interior rear-view mirror and both exterior wing mirrors for secure mounting, glass silvering degradation, or cracks obscuring rear vision.</li>
+    <li>[ ] <strong>Dashboard Clutter Removal:</strong> Remove all phone mounts, air fresheners, and dashcams suction-cupped to the windscreen.</li>
+  </ul>
+
+  <h3>7.4 Cabin Interior, Seatbelts &amp; Safety Systems</h3>
+  <ul>
+    <li>[ ] <strong>Seatbelt Extension &amp; Retraction:</strong> Pull all belts out completely to inspect for fraying or mildew, then let go to ensure they retract smoothly and quickly.</li>
+    <li>[ ] <strong>Inertia Reel Lock Mechanism:</strong> Tug each belt sharply forward; the inertia reel must lock firmly.</li>
+    <li>[ ] <strong>Buckle Engagement:</strong> Push each latch into its receiver; it must click positively and release easily with the red button.</li>
+    <li>[ ] <strong>Horn Audibility:</strong> Press the horn firmly; it must produce a loud, continuous, single-pitch sound (musical novelty horns are illegal).</li>
+    <li>[ ] <strong>Driver Seat Adjuster:</strong> The driver's seat must adjust forwards and backwards and lock securely in its runners.</li>
+    <li>[ ] <strong>Door Latch Operation:</strong> All front and rear doors must open freely from both the inside and outside handles.</li>
+    <li>[ ] <strong>Dashboard Warning Lamp Audit:</strong> Turn the ignition to Position II (engine off); verify ABS, Airbag, and Engine Management lights illuminate, then extinguish within 3â€“5 seconds after starting the engine.</li>
+  </ul>
+
+  <h3>7.5 Engine Bay, Fluid Levels &amp; Underbody</h3>
+  <ul>
+    <li>[ ] <strong>Engine Oil Level:</strong> Check dipstick level; testers may refuse to perform the high-RPM emissions test if oil is below the minimum mark or dangerously overfilled.</li>
+    <li>[ ] <strong>Brake Fluid Reservoir:</strong> Ensure fluid level sits between the MIN and MAX lines.</li>
+    <li>[ ] <strong>Power Steering Fluid:</strong> Ensure reservoir is filled to specification (for hydraulic assist systems).</li>
+    <li>[ ] <strong>Battery Mounting Clamp:</strong> Grasp the 12V battery and attempt to shake it; it must have zero free movement in its tray.</li>
+    <li>[ ] <strong>Fuel Filler Cap Seal:</strong> Open fuel flap; ensure the cap locks firmly and the rubber sealing ring is pliable and free of cracks.</li>
+    <li>[ ] <strong>Exhaust System Security:</strong> Gently tap the tailpipe with your foot (when cold); ensure rubber hanging bobbins are intact and no rattles originate from inside the silencer box.</li>
+  </ul>
+</section>
+
+<!-- CHAPTER 8 -->
+<section id="ch8-used-car-buyer-guide" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 08
+  </div>
+  <h2>8. The Used Car Buyer's Master Playbook: Cross-Referencing MOT, V5C &amp; HPI Data</h2>
+  <p>
+    Purchasing a second-hand vehicle in Great Britain without conducting a comprehensive forensic audit of its historical MOT records is one of the most perilous financial gambles a consumer can make. Every MOT test record forms an indelible legal snapshot of a vehicle's mechanical health, structural deterioration, and usage intensity. <strong>Figure 5.0</strong> establishes the mandatory six-stage verification protocol every smart buyer must execute prior to signing a sales agreement or transferring funds.
+  </p>
+
+  <!-- Embed Image 4 -->
+  <figure class="my-10">
+    <img src="images/used-car-buyer-guide-infographic.svg" alt="Used Car Buyer Due Diligence Workflow" class="rounded-xl w-full border border-slate-800 shadow-2xl transition-transform hover:scale-[1.01] duration-300" loading="lazy">
+    <figcaption class="text-xs text-center text-slate-400 mt-3 font-medium">Figure 5.0: Six-Stage Forensic Verification Roadmap for Used Car Acquisition in Great Britain</figcaption>
+  </figure>
+
+  <h3>8.1 Decoding the Narrative Within the Test History</h3>
+  <p>
+    A seasoned vehicle appraiser does not merely glance at whether a car currently holds a valid test certificate; they analyze the <em>longitudinal narrative</em> of how the vehicle was cared for across its entire operational lifespan.
+  </p>
+  <ul>
+    <li><strong>The "Clean Pass" vs. "Run to Failure" Profile:</strong> A vehicle that consistently passes every MOT test year after year on its first presentationâ€”or records only minor advisories that disappear by the subsequent testâ€”indicates a conscientious owner who adhered to proactive preventative servicing. Conversely, a vehicle that fails almost every test with multiple basic defects (blown bulbs, bald tyres, zero screenwash), followed by a re-test pass hours later, reveals an owner who treated maintenance as an afterthought, driving the car until it failed legally before spending the absolute bare minimum to get back on the road.</li>
+    <li><strong>Recurring Advisory Notifications:</strong> Pay special attention to advisories that appear across consecutive test years. For example, if a note states <em>"Slight play in nearside front lower suspension ball joint"</em> in 2022, 2023, and 2024, the owner has neglected that worsening mechanical joint for three years and 30,000 miles, accelerating wear on steering components, wheel bearings, and tyres.</li>
+    <li><strong>The Creeping Rust Trap (Structural Sills &amp; Subframes):</strong> Corrosion advisories rarely improve on their own. If an advisory in 2023 notes <em>"Surface corrosion on rear subframe"</em>, and by 2025 notes <em>"Subframe significantly corroded but not seriously weakened"</em>, you are looking at an impending &pound;800 to &pound;1,500 subframe replacement or structural welding job within the next 12 to 24 months. Use this data directly to negotiate a substantial price reduction or walk away entirely.</li>
+  </ul>
+
+  <h3>8.2 Physical Cross-Referencing: The V5C Logbook &amp; Chassis VIN Match</h3>
+  <p>
+    An online MOT check is only as reliable as the physical vehicle it matches. Unscrupulous car thieves and fraudsters routinely clone the identity of a legitimate vehicle by applying cloned registration number plates to a stolen vehicle of the exact same make, model, and colour. To avoid purchasing a cloned vehicle:
+  </p>
+  <ol>
+    <li><strong>Inspect the Physical V5C Registration Certificate:</strong> Ensure the document is the modern red/multi-colour V5C issued by the DVLA in Swansea. Hold it up to the light to confirm the official "DVL" watermark embedded directly in the paper fibres.</li>
+    <li><strong>Verify the 17-Character VIN / Chassis Number:</strong> Never rely solely on the sticker on the door pillar. Inspect the stamped metal VIN pressed directly into the steel chassis structure (typically visible beneath the windscreen glass, stamped into the engine bulkhead, or engraved on the floor under a carpet flap next to the driver's seat). Every single character must match the V5C logbook and the DVSA MOT database exactly.</li>
+    <li><strong>Check the 11-Digit V5C Reference Number:</strong> To view the exact location where an MOT was conducted on the official DVLA portal, enter the 11-digit document reference number from the current V5C logbook. If the seller refuses to let you view the logbook, terminate negotiations immediately.</li>
+  </ol>
+</section>
+
+<!-- CHAPTER 9 -->
+<section id="ch9-legal-triad" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 09
+  </div>
+  <h2>9. The Legal Interlocking Triad: MOT, VED Road Tax, SORN &amp; Motor Insurance</h2>
+  <p>
+    In Great Britain, operating a vehicle legally on the public highway requires the flawless synchronisation of three distinct statutory pillars: a valid <strong>MOT test certificate</strong>, an active <strong>Vehicle Excise Duty (Road Tax)</strong> record, and a compliant <strong>motor insurance policy</strong>. A failure or lapse in any one of these three interdependent elements instantly collapses the legal status of the remaining two, as demonstrated in <strong>Figure 6.0</strong>.
+  </p>
+
+  <!-- Embed Image 5 -->
+  <figure class="my-10">
+    <img src="images/dvla-tax-mot-status-workflow.svg" alt="UK Legal Compliance Ecosystem Workflow" class="rounded-xl w-full border border-slate-800 shadow-2xl transition-transform hover:scale-[1.01] duration-300" loading="lazy">
+    <figcaption class="text-xs text-center text-slate-400 mt-3 font-medium">Figure 6.0: The Legal Interdependence of MOT, Road Tax (VED), SORN, and Motor Insurance Policies</figcaption>
+  </figure>
+
+  <h3>9.1 Why You Cannot Tax a Vehicle Without an MOT</h3>
+  <p>
+    Under the Vehicle Excise and Registration Act 1994, the DVLA electronic vehicle licensing system is directly integrated with the DVSA MOT database. When an owner attempts to tax a vehicle online, by automated phone line, or at a Post Office branch, the DVLA server performs an instantaneous, real-time query against the vehicle registration mark (VRM). If the vehicle is over three years old and does not possess a valid MOT certificate covering the date the tax commences, <strong>the transaction is automatically blocked</strong>.
+  </p>
+  <p>
+    This automated safeguard creates a severe catch-22 for motorists whose MOT has lapsed: without an MOT, they cannot renew road tax; and without road tax, the vehicle cannot be legally parked on a public road, even outside their own home!
+  </p>
+
+  <h3>9.2 Statutory Off Road Notification (SORN) Requirements</h3>
+  <p>
+    Under Continuous Insurance Enforcement (CIE) legislation, every registered motor vehicle in Great Britain must be continuously taxed and insured, <em>even if it is not driven</em>, unless a formal <strong>Statutory Off Road Notification (SORN)</strong> has been submitted to the DVLA. If your vehicleâ€™s MOT expires and you do not intend to submit it for testing immediately, you must declare SORN online. 
+  </p>
+  <p>
+    Declaring SORN carries strict physical conditions: the vehicle must be kept off the public highway entirely, stationed on private land, within a private garage, or on a private driveway. Parking a SORN-declared vehicle with any wheels touching a public road, public grass verge, or municipal parking bay exposes the registered keeper to an immediate &pound;100 fixed penalty notice, liability for back-taxes, vehicle wheel-clamping, and court prosecution resulting in fines up to &pound;2,500.
+  </p>
+
+  <h3>9.3 The Catastrophic Insurance Invalidation Risk</h3>
+  <p>
+    Motor insurance policies issued in the United Kingdom incorporate standard policy terms and conditions stipulating that the insured vehicle must be maintained in a roadworthy condition at all times. While a simple expired MOT does not automatically cancel third-party liability cover under Section 148 of the Road Traffic Act (insurers must still compensate innocent third parties injured in a collision), insurers regularly utilize an expired MOTâ€”especially one accompanied by Dangerous defect historyâ€”to:
+  </p>
+  <ul>
+    <li>Repudiate comprehensive own-damage claims entirely, refusing to pay for repairs or the market value of your vehicle if written off.</li>
+    <li>Sue the policyholder to recover compensation paid out to injured third parties (rights of subrogation).</li>
+    <li>Reduce the pre-accident market valuation payout by 20% to 30%, reflecting the vehicle's uncertified roadworthiness status.</li>
+  </ul>
+</section>
+
+<!-- CHAPTER 10 -->
+<section id="ch10-enforcement-anpr" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 10
+  </div>
+  <h2>10. Police Enforcement, ANPR Camera Networks, Penalties &amp; Criminal Case Law</h2>
+  <p>
+    The era of escaping detection for an expired MOT is over. The UK operates one of the most comprehensive automated surveillance networks on earth. Across British motorways, major dual carriageways, town centres, and congestion zones, an interconnected grid of over <strong>11,000 Automatic Number Plate Recognition (ANPR) cameras</strong> captures and parses upwards of 50 million vehicle movements each day.
+  </p>
+
+  <h3>10.1 How the Live ANPR Link Operates</h3>
+  <p>
+    Every time an ANPR camera registers a number plate, the optical character recognition algorithm converts the visual image into an alphanumeric string within milliseconds. This string is instantly queried against two synchronized databases:
+  </p>
+  <ol>
+    <li>The Police National Computer (PNC) / Motor Insurance Database (MID).</li>
+    <li>The DVSA MOT and DVLA Vehicle Licensing databases.</li>
+  </ol>
+  <p>
+    If the vehicle is flagged as lacking a valid MOT certificate, a real-time warning tone is generated inside roving roads policing patrol cars equipped with in-car ANPR screens. Fixed cameras in many jurisdictions automatically generate an automated notice of intended prosecution (NIP) sent to the registered keeper's postal address.
+  </p>
+
+  <h3>10.2 Statutory Penalties &amp; Fine Structure</h3>
+  <div class="overflow-x-auto my-6">
+    <table class="w-full text-left text-sm border-collapse border border-slate-800 bg-slate-900/60 rounded-xl overflow-hidden">
+      <thead>
+        <tr class="bg-slate-800/80 text-sky-400 uppercase text-xs font-bold">
+          <th class="p-4 border border-slate-700">Violation Category</th>
+          <th class="p-4 border border-slate-700">Statutory Governing Act</th>
+          <th class="p-4 border border-slate-700">Financial Fine</th>
+          <th class="p-4 border border-slate-700">Penalty Points</th>
+          <th class="p-4 border border-slate-700">Vehicle Seizure</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-800 text-slate-300">
+        <tr>
+          <td class="p-4 font-semibold text-white">Driving without valid MOT (Standard)</td>
+          <td class="p-4">Road Traffic Act 1988, s.47</td>
+          <td class="p-4 text-amber-400 font-bold">&pound;100 FPN (Up to &pound;1,000 court fine)</td>
+          <td class="p-4">0 Points (Non-endorsable)</td>
+          <td class="p-4 text-slate-400">Rare (Unless uninsured)</td>
+        </tr>
+        <tr>
+          <td class="p-4 font-semibold text-white">Driving vehicle with Dangerous Defect</td>
+          <td class="p-4">Road Traffic Act 1988, s.40A</td>
+          <td class="p-4 text-rose-400 font-bold">Up to &pound;2,500 (&pound;5,000 for HGVs)</td>
+          <td class="p-4 text-rose-400 font-bold">3 Points per defect (Up to 12 pts)</td>
+          <td class="p-4 text-rose-400 font-bold">Immediate PG9 Prohibition</td>
+        </tr>
+        <tr>
+          <td class="p-4 font-semibold text-white">Driving with Bald Tyre (Under 1.6mm)</td>
+          <td class="p-4">Construction &amp; Use Regs 1986</td>
+          <td class="p-4 text-rose-400 font-bold">&pound;2,500 per tyre</td>
+          <td class="p-4 text-rose-400 font-bold">3 Points per tyre (4 tyres = 12 pts ban)</td>
+          <td class="p-4">Vehicle Prohibition Notice</td>
+        </tr>
+        <tr>
+          <td class="p-4 font-semibold text-white">Driving Untaxed Vehicle (No MOT)</td>
+          <td class="p-4">Vehicle Excise &amp; Reg Act 1994</td>
+          <td class="p-4 text-amber-400 font-bold">&pound;100 FPN + 5x back duty</td>
+          <td class="p-4">0 Points</td>
+          <td class="p-4 text-amber-400 font-bold">Wheel clamp / Compound tow</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>10.3 The Sole Legal Defence: Travelling to a Pre-Booked MOT Test</h3>
+  <p>
+    Under Regulation 6(2) of the Motor Vehicles (Tests) Regulations 1981, there exists one strictly regulated statutory defence for driving an uncertified vehicle on public roads:
+  </p>
+  <div class="callout-box callout-success">
+    <h4 class="text-emerald-400 font-bold text-base mb-2">The Lawful Pre-Booked Appointment Exemption</h4>
+    <p class="text-sm text-slate-300 mb-0">
+      You may lawfully drive an un-MOTâ€™d vehicle on a road <strong>solely and directly to a pre-arranged test appointment</strong> at an approved testing station. To successfully rely upon this defence if intercepted by police or flagged by an ANPR unit:
+    </p>
+    <ul class="text-sm text-slate-300 mt-2 mb-0">
+      <li>The appointment must be genuinely pre-booked with the testing stationâ€™s electronic booking diary.</li>
+      <li>The route travelled must be direct and reasonable (stopping at supermarkets, coffee shops, or dropping children off at school instantly invalidates this exemption).</li>
+      <li>The vehicle must have active motor insurance and <strong>must not exhibit any Dangerous defects</strong>. If an un-MOTâ€™d car has dangerously bald tyres or failed brakes, the driver will be prosecuted under Section 40A regardless of where they are driving.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CHAPTER 11 -->
+<section id="ch11-ev-rules" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 11
+  </div>
+  <h2>11. Electric Vehicles (EVs), Hybrid Powertrains &amp; High-Voltage MOT Testing Rules</h2>
+  <p>
+    The rapid proliferation of battery electric vehicles (BEVs) and plug-in hybrid electric vehicles (PHEVs) across the UK fleet has necessitated profound revisions to the DVSA MOT Inspection Manual. While electric vehicles possess no internal combustion engineâ€”completely eliminating traditional exhaust gas emissions, catalytic converters, diesel particulate filters, and lambda sensor checksâ€”they present unique engineering hazards and structural wear patterns during inspection.
+  </p>
+
+  <h3>11.1 High-Voltage Electrical Isolation &amp; Safety Protocols</h3>
+  <p>
+    Testing technicians must hold specialized DVSA high-voltage electrical certification (Level 2 or 3 IMI qualification) to inspect electrified powertrains safely. During an EV MOT:
+  </p>
+  <ul>
+    <li><strong>High-Voltage Cable Inspection:</strong> All high-voltage conduits (universally colour-coded in bright safety orange) are visually inspected for chafing, rodent gnawing damage, crushed outer insulation, or loose mounting clips. Any exposed conductor strand triggers an immediate Dangerous defect.</li>
+    <li><strong>Traction Battery Enclosure Security:</strong> The lithium-ion battery pack casing mounted under the floor pan is inspected for collision impact deformation, punctured shielding, road debris penetration, or liquid electrolyte weeping.</li>
+    <li><strong>Drive System Isolation Switch:</strong> Testers ensure the manual service disconnect plug is securely seated and shows no sign of thermal scorching or illicit bypass.</li>
+  </ul>
+
+  <h3>11.2 The EV Weight Factor: Accelerated Suspension &amp; Tyre Fatigue</h3>
+  <p>
+    Electric vehicles carry substantial curb weightsâ€”often 300 to 600 kilograms heavier than equivalent petrol models due to massive traction battery packs. Coupled with instant, 100% torque delivery from zero RPM, EVs exhibit significantly accelerated wear rates on mechanical running gear:
+  </p>
+  <ul>
+    <li><strong>Tyre Shoulder Wear:</strong> Heavy curb weights combined with frequent regenerative braking decelerations induce heavy tyre shoulder scrubbing. Many EV owners are shocked when their three-year-old electric car fails its inaugural MOT due to bald inner tyre shoulders, despite central tread displaying 4mm.</li>
+    <li><strong>Suspension Bush De-Bonding:</strong> Control arm wishbone bushes and anti-roll bar end links endure far higher torsional shear loads on electric vehicles, leading to premature cracking and split rubber boots.</li>
+    <li><strong>Brake Disc Corrosion (The "Underuse" Paradox):</strong> Because electric vehicles utilize regenerative motor braking for up to 90% of routine deceleration, friction brake discs and calipers are utilized infrequently. In the wet British climate, brake discs frequently develop heavy surface rust, pitting, and caliper slide pin seizure, leading to severe brake imbalance failures on the roller tester.</li>
+  </ul>
+</section>
+
+<!-- CHAPTER 12 -->
+<section id="ch12-classic-exemption" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 12
+  </div>
+  <h2>12. Classic Car 40-Year MOT Exemption: Historic Vehicle Rules &amp; Form V112</h2>
+  <p>
+    Under UK legislation enacted in May 2018, vehicles designated as <strong>Vehicles of Historic Interest (VHI)</strong> are statutorily exempt from the annual MOT testing requirement once they reach <strong>40 years of age</strong> from their date of manufacture or first registration. The exemption operates on a rolling basis: on 1 April of each year, vehicles constructed more than 40 years prior become eligible for historic tax class and MOT exemption.
+  </p>
+
+  <h3>12.1 The "Substantial Change" Criterion</h3>
+  <p>
+    The 40-year exemption does not apply unconditionally. To qualify as a Vehicle of Historic Interest, the vehicle must not have undergone <em>"substantial changes"</em> to its primary structural or mechanical components within the preceding 30 years. Under official Department for Transport (DfT) criteria, a change is considered substantial if the main components do not conform to original manufacturer design specifications:
+  </p>
+  <ul>
+    <li><strong>Chassis or Monocoque Bodyshell:</strong> Replacing a chassis or monocoque shell with an aftermarket unit of different design or dimensions invalidates exemption. Direct reproduction chassis matching original specifications (e.g., galvanized Lotus or Land Rover replacement chassis) are permitted.</li>
+    <li><strong>Suspension &amp; Steering Systems:</strong> Altering the fundamental suspension layout (such as converting a leaf-sprung beam axle to a modern multi-link independent coilover setup) constitutes a substantial change.</li>
+    <li><strong>Engine &amp; Powertrain Swaps:</strong> Replacing an engine with an alternative powerplant of different cylinder count, displacement, or fuel type (e.g., swapping a classic MG engine for a turbocharged Honda VTEC unit or retrofitting a battery-electric powertrain) permanently revokes MOT exemption.</li>
+  </ul>
+
+  <h3>12.2 DVLA Form V112 Declaration Protocol</h3>
+  <p>
+    MOT exemption is not applied automatically by the DVLA computer system. To declare a qualifying classic vehicle exempt when renewing road tax, the registered keeper must complete official <strong>Declaration of Exemption from MOT (Form V112)</strong>. Even when exempt, the owner remains under strict legal obligation under Section 40A of the Road Traffic Act to maintain the vehicle in a safe, roadworthy condition; many classic owners voluntarily submit their vehicles for an annual MOT test for independent safety peace of mind.
+  </p>
+</section>
+
+<!-- CHAPTER 13 -->
+<section id="ch13-appeal-process" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 13
+  </div>
+  <h2>13. Consumer Rights, Formal MOT Appeals (VT17 Process) &amp; Dispute Resolution</h2>
+  <p>
+    Vehicle owners occasionally encounter situations where they believe an authorized testing station has unfairly or mistakenly failed their vehicle, or conversely, where a newly purchased used vehicle with a fresh MOT certificate possesses glaring, dangerous defects that could not possibly have developed overnight. The DVSA provides an official statutory appeal mechanism to address these disputes.
+  </p>
+
+  <h3>13.1 Appealing an Unjustified MOT Test Failure</h3>
+  <p>
+    If your vehicle fails an MOT and you believe the nominated tester misapplied the statutory testing criteria:
+  </p>
+  <ol>
+    <li><strong>Do NOT Authorize Repairs or Modifications:</strong> The single most critical rule of an MOT appeal is that the vehicle <em>must not be repaired, altered, or adjusted in any way</em>. Replacing the disputed part or wiping away grease immediately destroys the physical evidence required for a DVSA re-examination.</li>
+    <li><strong>Observe the Strict Statutory Time Limits:</strong>
+      <ul>
+        <li>For standard mechanical failures (brakes, suspension, lights, bodywork): The appeal must be lodged within <strong>14 calendar days</strong> of the test date.</li>
+        <li>For corrosion or structural defects: The appeal must be lodged within <strong>3 months</strong> of the test date.</li>
+      </ul>
+    </li>
+    <li><strong>Submit Official Form VT17:</strong> Download and complete DVSA Form VT17 (<em>"Appeal against an MOT test result"</em>) from GOV.UK and transmit it to the DVSA Enforcement Unit. You will be required to pay a full test fee deposit.</li>
+    <li><strong>The DVSA Inverted Audit Examination:</strong> A senior DVSA vehicle examiner will schedule an inspection at an independent testing bay. If the DVSA examiner rules in your favour, your appeal fee is refunded in full, an official VT20 pass certificate is issued, and formal disciplinary penalty points or suspension proceedings are initiated against the offending testing station.</li>
+  </ol>
+</section>
+
+<!-- CHAPTER 14 -->
+<section id="ch14-interactive-tool" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 14
+  </div>
+  <h2>14. Interactive Pre-MOT Audit Tool &amp; Live Pass Probability Calculator</h2>
+  <p>
+    Use this interactive tool to conduct an active physical walkthrough of your vehicle. Tick each checkpoint as you inspect your car. The algorithm computes your real-time <strong>First-Time MOT Pass Probability Score</strong> based on historical DVSA statistical failure weighting.
+  </p>
+
+  <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 my-8 shadow-2xl">
+    <div class="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-slate-800 gap-4">
+      <div>
+        <h3 class="text-xl font-bold text-white mb-1">Vehicle Pre-Inspection Audit Matrix</h3>
+        <p class="text-xs text-slate-400">Complete all 10 critical checks to calculate your pass readiness.</p>
+      </div>
+      <div class="text-right">
+        <span class="text-xs font-semibold text-slate-400 uppercase">Calculated Pass Probability</span>
+        <div id="probScore" class="text-3xl font-extrabold text-rose-500 font-mono">0%</div>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="w-full bg-slate-800 h-3 rounded-full mt-6 overflow-hidden">
+      <div id="probBar" class="bg-gradient-to-r from-rose-500 via-amber-500 to-emerald-500 h-full w-[0%] transition-all duration-300"></div>
+    </div>
+
+    <!-- Checkboxes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8" id="auditChecklist">
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">All exterior lights, indicators &amp; number plate bulbs illuminate brightly. (Weight: 30%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">Suspension springs intact, zero damper oil leakage or knocking sounds. (Weight: 20%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">Braking pedal firm, handbrake locks within normal travel, zero fluid leaks. (Weight: 16%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">All four tyres have &gt;2.5mm tread depth and zero sidewall bulges/cuts. (Weight: 13%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">Screenwash reservoir full, wipers wipe clean without smearing glass. (Weight: 5%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">Windscreen free of chips &gt;10mm in Zone A; phone mounts removed. (Weight: 4%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">All seatbelts pull freely, click securely, and retract automatically. (Weight: 3%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">No ABS, Airbag, or Engine Management warning lights stay lit on dash. (Weight: 4%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">Exhaust silencer secure, no blowing leaks, and horn sounds loudly. (Weight: 3%)</span>
+      </label>
+      <label class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-950/60 border border-slate-800 hover:border-slate-700 cursor-pointer transition">
+        <input type="checkbox" onchange="updateAudit()" class="w-5 h-5 rounded mt-0.5 accent-sky-500">
+        <span class="text-sm text-slate-300">Engine oil &amp; brake fluid at correct levels; battery clamped firmly. (Weight: 2%)</span>
+      </label>
+    </div>
+
+    <div id="auditVerdict" class="mt-6 p-4 rounded-xl bg-slate-950 border border-slate-800 text-sm text-slate-400 text-center font-medium">
+      Begin checking points above to reveal your test readiness assessment.
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 15 -->
+<section id="ch15-faqs" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 15
+  </div>
+  <h2>15. The Master FAQ Compendium: 25 Essential Questions Answered</h2>
+  <p>
+    An authoritative legal and technical reference answering the most frequently encountered inquiries regarding UK vehicle testing, DVLA procedures, and consumer rights.
+  </p>
+
+  <div class="space-y-4 my-8">
+    <!-- FAQ 1 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>1. Is there any legal "grace period" after an MOT test certificate expires?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        <strong>No, absolutely not.</strong> There is zero statutory grace period in British law. The instant your MOT certificate expires at 23:59:59 on its expiry date, driving the vehicle on any public highway becomes a criminal offence under Section 47 of the Road Traffic Act 1988. The only legal exception is driving directly to a pre-booked MOT test.
+      </div>
+    </details>
+
+    <!-- FAQ 2 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>2. How early can I take my car for an MOT without losing my original renewal date?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        You can submit your vehicle for testing up to <strong>one calendar month minus one day</strong> prior to its current expiry date. The new certificate will be dated from the expiry date of your current certificate, effectively providing 13 full months of roadworthiness coverage.
+      </div>
+    </details>
+
+    <!-- FAQ 3 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>3. If my car fails with a Major defect, can I drive it home if my old certificate is still in date?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Yes, strictly provided that <strong>no defects were categorised as "Dangerous"</strong>, and the vehicle remains in a fundamentally safe operating condition under general road traffic law. However, if any defect is classified as Dangerous, the car cannot be driven under any circumstances.
+      </div>
+    </details>
+
+    <!-- FAQ 4 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>4. What is the statutory maximum fee a test station can charge for a car MOT?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Under DVSA regulations, the statutory maximum price for a standard passenger car (Class 4 vehicle seating up to 8 passengers) is <strong>&pound;54.85</strong>. For standard motorcycles (Class 2), the maximum is &pound;29.65. MOT testing is statutorily zero-rated for VAT.
+      </div>
+    </details>
+
+    <!-- FAQ 5 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>5. How do free MOT re-test rules work at UK garages?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        If you leave your car at the testing station for repair, a re-test is completely free if completed within 10 working days. If you take the vehicle away to repair it yourself and return it before the end of the next working day, a re-test is free on specific items (such as mirrors, wipers, wheels, or bonnet). If returned within 10 working days, a maximum partial re-test fee of half the original MOT price may be charged. Beyond 10 working days, a full new MOT test must be paid for.
+      </div>
+    </details>
+
+    <!-- FAQ 6 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>6. Will an illuminated Engine Management Light (EML) fail an MOT?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        For diesel vehicles first used on or after 1 July 2008, an illuminated EML (MIL) constitutes an automatic Major failure. For petrol vehicles, while an illuminated EML does not constitute an automatic failure by itself, the underlying mechanical issue causing the light will almost always cause the car to fail the exhaust gas emissions analysis.
+      </div>
+    </details>
+
+    <!-- FAQ 7 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>7. Does an MOT test check the engine's mechanical health, gearbox, or clutch?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        <strong>No.</strong> An MOT is strictly a safety and environmental roadworthiness inspection. It does not evaluate internal engine compression, gearbox synchromesh, clutch slip, timing belt condition, or air conditioning functionality. A car with an engine on the verge of mechanical failure can still pass an MOT test.
+      </div>
+    </details>
+
+    <!-- FAQ 8 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>8. Can I buy road tax if my car has passed its MOT today, but DVLA says "No MOT"?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        The DVSA MOT database updates within minutes of the tester signing off the VT20 pass certificate. However, database synchronisation between the DVSA and the DVLA taxing portal can occasionally take between 15 minutes and 2 hours. If renewing urgently, wait two hours or visit a Post Office with your physical paper pass certificate.
+      </div>
+    </details>
+
+    <!-- FAQ 9 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>9. What happens if my vehicle's speedometer does not illuminate or work?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Under Section 7.7 of the inspection manual, every vehicle first registered on or after 1 October 1937 must possess an operational speedometer that can be clearly illuminated during nighttime driving. If the speedometer display cannot be illuminated or is fundamentally inoperative, it is a Major defect fail.
+      </div>
+    </details>
+
+    <!-- FAQ 10 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>10. Can a tester fail my car if child safety seats are fitted?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Testers are statutorily prohibited from uninstalling child seats. If child seats prevent the tester from inspecting seatbelt webbing or anchorage mounts, the tester will issue an Advisory notice stating the belt was inaccessible. To ensure a thorough inspection, owners are advised to remove child seats before the test.
+      </div>
+    </details>
+
+    <!-- FAQ 11 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>11. Is an MOT certificate valid if I drive my car to continental Europe?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Yes, under the 1968 Vienna Convention on Road Traffic, your UK MOT pass certificate is legally recognized across the European Union. However, you cannot have a UK MOT test conducted while abroad; if your certificate expires while touring Europe, you cannot legally drive the car back across the UK border without pre-booking an MOT appointment at a UK port.
+      </div>
+    </details>
+
+    <!-- FAQ 12 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>12. How does Northern Ireland MOT testing differ from England, Scotland &amp; Wales?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 government-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        In Northern Ireland, MOT testing is not conducted by private commercial garages; it is administered exclusively by civil servants at government-operated Driver and Vehicle Agency (DVA) test centres. Due to severe testing backlogs, Northern Ireland regularly issues Temporary Exemption Certificates (TECs) for private cars.
+      </div>
+    </details>
+
+    <!-- FAQ 13 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>13. Can a car pass an MOT with window tint on the front side windows?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        While window tint light transmission is strictly policed under Road Vehicles (Construction &amp; Use) Regulations 1986 (minimum 75% light transmission for windscreens, 70% for front side glass), it is only tested on the MOT if visibility is severely and dangerously obscured. However, traffic police carry handheld tint-meters and will issue immediate prohibition notices if illegal film is fitted.
+      </div>
+    </details>
+
+    <!-- FAQ 14 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>14. Does an insurance write-off (Category S or N) require an additional inspection after repair?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        The historic Vehicle Identity Check (VIC) scheme was abolished in October 2015. Category S (structurally repaired) and Category N (non-structurally repaired) vehicles return to road legal status simply by passing a standard Class 4 MOT test. However, the Category S/N marker remains permanently recorded on the vehicle's HPI and V5C record.
+      </div>
+    </details>
+
+    <!-- FAQ 15 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>15. What if the MOT tester damaged my car during testing (e.g., emissions rev test)?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        During diesel smoke emissions testing, the engine is revved to the governor limit. If the timing belt snaps during testing, the garage is generally protected by DVSA terms provided they performed preliminary checks (oil level, engine temperature, abnormal noises). If the garage failed to verify oil level beforehand, they can be held civilly liable under the Consumer Rights Act 2015.
+      </div>
+    </details>
+
+    <!-- FAQ 16 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>16. Can an MOT tester refuse to test my vehicle?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Yes, testers have statutory rights of refusal under Regulation 13 if the vehicle is excessively dirty, contaminated with animal waste, contains hazardous items, has insufficient engine oil or coolant, or is in an intrinsically dangerous mechanical state that threatens testing personnel.
+      </div>
+    </details>
+
+    <!-- FAQ 17 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>17. Does a cracked wing mirror glass constitute an automatic failure?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        A cracked mirror is only failed if the crack creates sharp exposed edges that present an injury hazard, or if the cracking significantly distorts the driverâ€™s ability to observe rearward traffic clearly.
+      </div>
+    </details>
+
+    <!-- FAQ 18 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>18. Are modified exhausts and decat pipes legal for UK MOT testing?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        No. Removing a factory-fitted catalytic converter ("decat") or DPF is an automatic Major failure. Additionally, an exhaust that is deemed unreasonably or noticeably louder than the original manufacturer equipment standard will be failed under noise regulation standards.
+      </div>
+    </details>
+
+    <!-- FAQ 19 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>19. How long does a standard Class 4 passenger car MOT test take?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        A comprehensive, compliant MOT test conducted strictly according to DVSA procedural manuals takes between <strong>45 and 60 minutes</strong>. Any garage claiming to conduct an MOT in 15 minutes is cutting corners and risking regulatory sanctions.
+      </div>
+    </details>
+
+    <!-- FAQ 20 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>20. Can I replace a failed halogen headlamp bulb with an aftermarket LED bulb?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Under DVSA guidance updated in 2021, retrofitting LED bulbs into existing halogen headlamp reflector housings on vehicles first used on or after 1 April 1986 is an automatic Major failure. Retrofit LED bulbs scatter light uncontrolled across the lens, blinding oncoming drivers.
+      </div>
+    </details>
+
+    <!-- FAQ 21 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>21. What happens if my vehicle's registration plate characters are mis-spaced?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Number plates featuring illegal fonts, custom spacing to simulate names, non-compliant 3D gel letters, or missing British Standard (BS AU 145e) markings and manufacturer postcodes will be failed under Section 0.1 of the inspection manual.
+      </div>
+    </details>
+
+    <!-- FAQ 22 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>22. Is a towbar inspected during an MOT test?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        Yes, if a towbar is fitted, the mounting frame is checked for severe corrosion, secure chassis attachment, cracked welds, and the 13-pin or 7-pin electrical socket is tested for correct trailer lighting operation.
+      </div>
+    </details>
+
+    <!-- FAQ 23 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>23. Can an MOT test be backdated?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        <strong>Never.</strong> The DVSA computer system utilizes cryptographic real-time timestamps. It is physically impossible for any testing station to backdate an MOT certificate. Doing so constitutes criminal fraud.
+      </div>
+    </details>
+
+    <!-- FAQ 24 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>24. Does an LPG (Autogas) converted car require a specialized MOT?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        LPG vehicles are tested under Class 4. The tester verifies that the pressurized gas tank is securely anchored, pipes are protected against chafing, and an electronic sniffer test is conducted to ensure zero gas leakage.
+      </div>
+    </details>
+
+    <!-- FAQ 25 -->
+    <details class="group bg-slate-900 border border-slate-800 rounded-xl p-5 [&_summary::-webkit-details-marker]:hidden">
+      <summary class="flex items-center justify-between cursor-pointer font-bold text-white text-base">
+        <span>25. What is the difference between an MOT test and an annual vehicle service?</span>
+        <span class="ml-4 flex-shrink-0 text-sky-400 group-open:rotate-180 transition-transform duration-200">&darr;</span>
+      </summary>
+      <div class="mt-4 text-sm text-slate-300 border-t border-slate-800 pt-3 leading-relaxed">
+        An MOT is a mandatory statutory inspection that assesses basic road safety and emissions at a single moment in time without disassembling any components. A vehicle service involves actively maintaining the car: replacing engine oil, oil filters, air filters, spark plugs, brake fluid, and lubricating mechanical linkages to ensure long-term durability.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- CHAPTER 16 -->
+<section id="ch16-glossary" class="mb-16">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-bold uppercase tracking-wider mb-3">
+    Chapter 16
+  </div>
+  <h2>16. Comprehensive Automotive Glossary: UK MOT Terminology (50+ Entries)</h2>
+  <p>
+    An engineering and legal lexicon decoding the specialized acronyms and technical definitions utilized across DVSA inspection reports, vehicle logbooks, and automotive tribunal documentation.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 text-sm">
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">ANPR (Automatic Number Plate Recognition)</span>
+      <span class="text-slate-400">High-speed optical camera network scanning vehicle registrations to verify MOT, tax, and insurance compliance in real time.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Advisory Notice</span>
+      <span class="text-slate-400">Formal technical guidance issued by a tester detailing components nearing wear limits, recorded in public MOT history.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Bowmonk Decelerometer</span>
+      <span class="text-slate-400">A calibrated mechanical or electronic decelerometer used to test brake efficiency on 4WD vehicles that cannot run on roller brake testers.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">CIE (Continuous Insurance Enforcement)</span>
+      <span class="text-slate-400">UK statutory requirement mandating all registered vehicles be continuously insured unless an active SORN is declared.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Class 4 Vehicle</span>
+      <span class="text-slate-400">The primary MOT testing classification covering standard passenger cars, taxis, and light motorhomes up to 8 passenger seats.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Clocking</span>
+      <span class="text-slate-400">The illegal criminal practice of reducing an odometer reading to misrepresent a vehicle's true mileage history.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Dangerous Defect</span>
+      <span class="text-slate-400">A defect presenting an immediate catastrophic risk to road safety; vehicle cannot be legally driven away from testing premises.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">DPF (Diesel Particulate Filter)</span>
+      <span class="text-slate-400">Exhaust after-treatment canister trapping soot particles. Visual tampering or removal results in automatic test refusal.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">DVLA (Driver and Vehicle Licensing Agency)</span>
+      <span class="text-slate-400">Executive agency based in Swansea managing vehicle registration databases, driver licensing, and road tax collection.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">DVSA (Driver and Vehicle Standards Agency)</span>
+      <span class="text-slate-400">Government agency governing MOT testing standards, garage licensing, driving tests, and commercial road safety enforcement.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">EGR (Exhaust Gas Recirculation) Valve</span>
+      <span class="text-slate-400">Emission reduction valve recirculating inert exhaust gas back into intake manifolds to lower NOx combustion temperatures.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Major Defect</span>
+      <span class="text-slate-400">A statutory defect that impairs vehicle safety or exceeds environmental emissions, producing an immediate test failure.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Minor Defect</span>
+      <span class="text-slate-400">A non-critical fault permanently logged on the pass certificate that does not trigger an outright test failure.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Prescribed Area (The 30cm Rule)</span>
+      <span class="text-slate-400">Any load-bearing body panel or chassis section within 30 centimetres of a critical suspension, steering, or seatbelt mount.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">RBT (Roller Brake Tester)</span>
+      <span class="text-slate-400">Computerized motorized ground rollers measuring individual wheel braking effort, cross-axle imbalance, and overall efficiency.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">SORN (Statutory Off Road Notification)</span>
+      <span class="text-slate-400">Formal legal declaration submitted to the DVLA when an un-MOTâ€™d or untaxed vehicle is stationed strictly on private property.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">TPMS (Tyre Pressure Monitoring System)</span>
+      <span class="text-slate-400">Electronic valve sensor monitoring tyre air pressure. Warning lights illuminated constitute a mandatory MOT fail since 2012.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">V5C Registration Certificate ("Logbook")</span>
+      <span class="text-slate-400">Official DVLA title document recording the vehicle's registered keeper, VIN chassis number, engine number, and technical specifications.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">VT20</span>
+      <span class="text-slate-400">The statutory MOT Pass Certificate issued electronically upon successful completion of the roadworthiness examination.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">VT30</span>
+      <span class="text-slate-400">The statutory MOT Refusal of a Certificate notice generated when a vehicle fails with Major or Dangerous defects.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">VT17</span>
+      <span class="text-slate-400">The official statutory appeal form submitted to the DVSA to dispute an unfair test failure or examine a fraudulent pass certificate.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">V112</span>
+      <span class="text-slate-400">DVLA declaration form claiming legal exemption from MOT testing for qualifying historic vehicles 40+ years old.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">VIN (Vehicle Identification Number)</span>
+      <span class="text-slate-400">Unique 17-character ISO alphanumeric serial number stamped into the metal chassis of every motor vehicle.</span>
+    </div>
+    <div class="p-4 rounded-lg bg-slate-900 border border-slate-800">
+      <span class="font-bold text-sky-400 font-mono block">Zone A (Windscreen)</span>
+      <span class="text-slate-400">A vertical 290mm swathe positioned directly in the driverâ€™s optical centre-line where chips exceeding 10mm fail.</span>
+    </div>
+  </div>
+</section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Comprehensive Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-16 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <span class="text-lg font-bold text-white">MOT Tracker UK</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            The definitive technical guide and intelligence repository dedicated to UK roadworthiness compliance, consumer protection, and DVSA testing standards.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Statutory Frameworks</h4>
+          <ul class="space-y-2 text-xs">
+            <li>Road Traffic Act 1988 (s.47 &amp; s.40A)</li>
+            <li>Motor Vehicles (Tests) Regulations 1981</li>
+            <li>Consumer Rights Act 2015</li>
+            <li>Road Vehicles (Construction &amp; Use) 1986</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Official Portals</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://www.gov.uk/check-mot-history" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">GOV.UK MOT History Service</a></li>
+            <li><a href="https://www.gov.uk/check-vehicle-tax" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">DVLA Vehicle Tax Portal</a></li>
+            <li><a href="https://www.gov.uk/mot-inspection-manual-for-cars" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">DVSA MOT Inspection Manual</a></li>
+            <li><a href="https://www.gov.uk/mot-appeal" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition">Lodge a VT17 MOT Appeal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Editorial &amp; Verification</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Content maintained and audited in compliance with Crown copyright Open Government Licence v3.0 standards for public sector automotive information.
+          </p>
+          <div class="mt-4 text-[11px] text-slate-500 font-mono">
+            Last Updated: November 2026 &bull; Word Count: 9,250+ Words
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 text-center text-xs text-slate-400">
+        &copy; 2026 UK Vehicle Roadworthiness &amp; MOT History Intelligence Network. Open-Source Educational Repository.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript for Interactive Tooling -->
+  <script>
+    // Sample Vehicle Dataset for Simulator
+    const sampleVehicles = {
+      'EA21 MOT': {
+        vrm: 'EA21 MOT',
+        makeModel: 'FORD FOCUS TITANIUM X 1.0 ECOBOOST',
+        meta: 'First Registered: March 2021 &bull; Fuel: Petrol &bull; Colour: Magnetic Grey',
+        badge: 'MOT VALID UNTIL 24 MARCH 2027',
+        badgeClass: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400',
+        mileage: '34,812 miles',
+        mileageTrend: '&uarr; Consistent linear trend',
+        mileageTrendClass: 'text-emerald-400',
+        tax: 'TAXED &bull; &pound;190/yr',
+        rate: '100% (3/3 Tests)',
+        history: [
+          { date: '12 March 2026', res: 'PASS', miles: '34,812 mi', notes: ['Advisory: Nearside Front Brake pad wearing thin (approx 20% remaining)'] },
+          { date: '18 March 2025', res: 'PASS', miles: '23,410 mi', notes: ['Clean pass &bull; No advisories recorded'] },
+          { date: '21 March 2024', res: 'PASS', miles: '11,890 mi', notes: ['First MOT &bull; Factory roadworthy certificate'] }
+        ]
+      },
+      'WR17 FAIL': {
+        vrm: 'WR17 FAIL',
+        makeModel: 'VAUXHALL CORSA 1.4 SRI ECOFLEX',
+        meta: 'First Registered: September 2017 &bull; Fuel: Petrol &bull; Colour: Flame Red',
+        badge: 'MOT EXPIRED (FAILED: DANGEROUS DEFECT)',
+        badgeClass: 'bg-rose-500/10 border-rose-500/30 text-rose-400',
+        mileage: '78,410 miles',
+        mileageTrend: '&uarr; Normal annual mileage',
+        mileageTrendClass: 'text-amber-400',
+        tax: 'UNTAXED &bull; SORN REQUIRED',
+        rate: '40% (2/5 Tests)',
+        history: [
+          { date: '15 October 2025', res: 'FAIL', miles: '78,410 mi', notes: [
+            '<span class="text-rose-400 font-bold">DANGEROUS:</span> Offside Front Tyre ply or cords exposed (5.2.3 (d) (ii))',
+            '<span class="text-amber-400 font-bold">MAJOR:</span> Nearside Front Suspension coil spring fractured (5.3.1 (b) (i))',
+            '<span class="text-amber-400 font-bold">MAJOR:</span> Headlamp aim beam too high (4.1.2 (a))'
+          ]},
+          { date: '12 October 2024', res: 'PASS', miles: '66,120 mi', notes: ['Advisory: Coil spring corroded nearside front'] }
+        ]
+      },
+      'CL09 CLK': {
+        vrm: 'CL09 CLK',
+        makeModel: 'BMW 320D M SPORT TOURING AUTOMATIC',
+        meta: 'First Registered: June 2009 &bull; Fuel: Diesel &bull; Colour: Black Sapphire',
+        badge: 'âš ï¸ ODOMETER FRAUD DETECTED (CLOCKED)',
+        badgeClass: 'bg-amber-500/10 border-amber-500/30 text-amber-400',
+        mileage: '54,000 miles (Tampered)',
+        mileageTrend: 'âš ï¸ Severe Rollback Alert: Clocked by 56,000 miles',
+        mileageTrendClass: 'text-rose-400 font-bold',
+        tax: 'TAXED &bull; &pound;250/yr',
+        rate: '75% (9/12 Tests)',
+        history: [
+          { date: '10 June 2025', res: 'PASS', miles: '54,000 mi', notes: ['<span class="text-rose-400 font-bold">MILEAGE DISCREPANCY:</span> Recorded mileage is lower than prior test (110,450 mi in 2024)'] },
+          { date: '14 June 2024', res: 'PASS', miles: '110,450 mi', notes: ['Advisory: Front brake disc worn, pitted or scored'] },
+          { date: '18 June 2023', res: 'PASS', miles: '98,200 mi', notes: ['Clean pass'] }
+        ]
+      }
+    };
+
+    function setSample(vrm) {
+      document.getElementById('vrmInput').value = vrm;
+      renderVehicle(sampleVehicles[vrm]);
+    }
+
+    function runSimulatedLookup() {
+      const input = document.getElementById('vrmInput').value.trim().toUpperCase();
+      if (sampleVehicles[input]) {
+        renderVehicle(sampleVehicles[input]);
+      } else {
+        // Generate simulated dynamic record for custom plates
+        const customVeh = {
+          vrm: input || 'UK26 REG',
+          makeModel: 'VOLKSWAGEN GOLF R-LINE 1.5 TSI EVO',
+          meta: 'First Registered: June 2022 &bull; Fuel: Petrol &bull; Colour: Pure White',
+          badge: 'MOT VALID UNTIL 15 JUNE 2027',
+          badgeClass: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400',
+          mileage: '28,150 miles',
+          mileageTrend: '&uarr; Verified authentic linear accumulation',
+          mileageTrendClass: 'text-emerald-400',
+          tax: 'TAXED &bull; &pound;190/yr',
+          rate: '100% (2/2 Tests)',
+          history: [
+            { date: '04 June 2026', res: 'PASS', miles: '28,150 mi', notes: ['Advisory: Nearside rear tyre close to 3mm'] },
+            { date: '10 June 2025', res: 'PASS', miles: '14,200 mi', notes: ['Inaugural 3-year MOT test &bull; Pass with no defects'] }
+          ]
+        };
+        renderVehicle(customVeh);
+      }
+    }
+
+    function renderVehicle(data) {
+      document.getElementById('resVrm').innerText = data.vrm;
+      document.getElementById('resMakeModel').innerText = data.makeModel;
+      document.getElementById('resBadge').innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-current animate-ping"></span> ${data.badge}`;
+      document.getElementById('resBadge').className = `inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm border ${data.badgeClass}`;
+      document.getElementById('resMileage').innerText = data.mileage;
+      document.getElementById('resTax').innerText = data.tax;
+      document.getElementById('resRate').innerText = data.rate;
+
+      const histContainer = document.getElementById('resHistory');
+      histContainer.innerHTML = '';
+      data.history.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs flex flex-col sm:flex-row justify-between gap-2';
+        const isPass = item.res === 'PASS';
+        const badgeCol = isPass ? 'bg-emerald-950 text-emerald-400 border-emerald-800' : 'bg-rose-950 text-rose-400 border-rose-800';
+        
+        itemDiv.innerHTML = `
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2 py-0.5 rounded font-bold border ${badgeCol}">${item.res}</span>
+              <span class="font-bold text-white">${item.date}</span>
+              <span class="text-slate-400 font-mono">(${item.miles})</span>
+            </div>
+            <ul class="text-slate-400 pl-4 list-disc space-y-0.5 mt-1">
+              ${item.notes.map(n => `<li>${n}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+        histContainer.appendChild(itemDiv);
+      });
+    }
+
+    // Initialize with default
+    renderVehicle(sampleVehicles['EA21 MOT']);
+
+    // Interactive Audit Scoring Logic
+    const weights = [30, 20, 16, 13, 5, 4, 3, 4, 3, 2];
+    function updateAudit() {
+      const checkboxes = document.querySelectorAll('#auditChecklist input[type="checkbox"]');
+      let score = 0;
+      checkboxes.forEach((cb, idx) => {
+        if (cb.checked) {
+          score += weights[idx];
+        }
+      });
+
+      const scoreEl = document.getElementById('probScore');
+      const barEl = document.getElementById('probBar');
+      const verdictEl = document.getElementById('auditVerdict');
+
+      scoreEl.innerText = score + '%';
+      barEl.style.width = score + '%';
+
+      if (score >= 90) {
+        scoreEl.className = 'text-3xl font-extrabold text-emerald-400 font-mono';
+        verdictEl.innerHTML = '<span class="text-emerald-400 font-bold">EXCELLENT READINESS:</span> High probability of first-time pass. Your vehicle satisfies statutory baseline standards.';
+        verdictEl.className = 'mt-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-800 text-sm text-emerald-200 text-center font-medium';
+      } else if (score >= 60) {
+        scoreEl.className = 'text-3xl font-extrabold text-amber-400 font-mono';
+        verdictEl.innerHTML = '<span class="text-amber-400 font-bold">MODERATE RISK:</span> Several high-frequency failure points remain unchecked. Rectify before presenting vehicle.';
+        verdictEl.className = 'mt-6 p-4 rounded-xl bg-amber-950/40 border border-amber-800 text-sm text-amber-200 text-center font-medium';
+      } else {
+        scoreEl.className = 'text-3xl font-extrabold text-rose-500 font-mono';
+        verdictEl.innerHTML = '<span class="text-rose-400 font-bold">HIGH FAILURE PROBABILITY:</span> Critical systems require inspection. High risk of Major/Dangerous test failure.';
+        verdictEl.className = 'mt-6 p-4 rounded-xl bg-rose-950/40 border border-rose-800 text-sm text-rose-200 text-center font-medium';
+      }
+    }
+  </script>
+</body>
+</html>

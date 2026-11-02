@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg6)" />
+
+  <text x="80" y="65" fill="#10b981" font-family="sans-serif" font-size="14" font-weight="700" letter-spacing="2">FIRST-TIME PASS OPTIMISATION</text>
+  <text x="80" y="110" fill="#ffffff" font-family="sans-serif" font-size="34" font-weight="800">Top MOT Failure Distribution &amp; DIY Prevention</text>
+  <text x="80" y="145" fill="#94a3b8" font-family="sans-serif" font-size="16">Nearly 48% of MOT failures can be prevented in 15 minutes before reaching the testing bay</text>
+
+  <!-- Left: Horizontal Bar Chart of Failures -->
+  <g transform="translate(80, 190)">
+    <rect width="550" height="390" rx="16" fill="#152033" stroke="#334155" stroke-width="1.5" />
+    <text x="30" y="40" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">UK Average MOT Failure Reasons (DVSA Data)</text>
+
+    <!-- Bar 1: Lighting -->
+    <text x="30" y="85" fill="#cbd5e1" font-family="sans-serif" font-size="13">Lamps, Reflectors &amp; Electrical</text>
+    <text x="490" y="85" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="bold">30.1%</text>
+    <rect x="30" y="95" width="480" height="18" rx="6" fill="#1e293b" />
+    <rect x="30" y="95" width="360" height="18" rx="6" fill="#0284c7" />
+
+    <!-- Bar 2: Suspension -->
+    <text x="30" y="145" fill="#cbd5e1" font-family="sans-serif" font-size="13">Suspension (Springs, Dampers, Wishbones)</text>
+    <text x="490" y="145" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="bold">19.8%</text>
+    <rect x="30" y="155" width="480" height="18" rx="6" fill="#1e293b" />
+    <rect x="30" y="155" width="240" height="18" rx="6" fill="#d97706" />
+
+    <!-- Bar 3: Brakes -->
+    <text x="30" y="205" fill="#cbd5e1" font-family="sans-serif" font-size="13">Brakes &amp; Fluid Hydraulic Lines</text>
+    <text x="490" y="205" fill="#f87171" font-family="sans-serif" font-size="13" font-weight="bold">16.2%</text>
+    <rect x="30" y="215" width="480" height="18" rx="6" fill="#1e293b" />
+    <rect x="30" y="215" width="195" height="18" rx="6" fill="#dc2626" />
+
+    <!-- Bar 4: Tyres -->
+    <text x="30" y="265" fill="#cbd5e1" font-family="sans-serif" font-size="13">Tyres (Tread Depth &amp; Sidewall Damage)</text>
+    <text x="490" y="265" fill="#4ade80" font-family="sans-serif" font-size="13" font-weight="bold">12.9%</text>
+    <rect x="30" y="275" width="480" height="18" rx="6" fill="#1e293b" />
+    <rect x="30" y="275" width="155" height="18" rx="6" fill="#16a34a" />
+
+    <!-- Bar 5: Visibility & Wipers -->
+    <text x="30" y="325" fill="#cbd5e1" font-family="sans-serif" font-size="13">Visibility (Windscreen, Washers, Wipers)</text>
+    <text x="490" y="325" fill="#a78bfa" font-family="sans-serif" font-size="13" font-weight="bold">8.7%</text>
+    <rect x="30" y="335" width="480" height="18" rx="6" fill="#1e293b" />
+    <rect x="30" y="335" width="105" height="18" rx="6" fill="#7c3aed" />
+  </g>
+
+  <!-- Right: 5-Minute DIY Checklist -->
+  <g transform="translate(660, 190)">
+    <rect width="460" height="390" rx="16" fill="#152033" stroke="#10b981" stroke-width="1.5" />
+    <text x="30" y="40" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">5-Minute DIY Pass Checklist</text>
+
+    <g transform="translate(30, 70)">
+      <circle cx="15" cy="15" r="14" fill="#065f46" />
+      <text x="15" y="20" fill="#6ee7b7" font-family="sans-serif" font-size="13" text-anchor="middle">✓</text>
+      <text x="40" y="15" fill="#f1f5f9" font-family="sans-serif" font-size="14" font-weight="600">Top Up Screenwash Reservoir</text>
+      <text x="40" y="33" fill="#94a3b8" font-family="sans-serif" font-size="12">Empty reservoir = instant major test fail</text>
+    </g>
+
+    <g transform="translate(30, 135)">
+      <circle cx="15" cy="15" r="14" fill="#065f46" />
+      <text x="15" y="20" fill="#6ee7b7" font-family="sans-serif" font-size="13" text-anchor="middle">✓</text>
+      <text x="40" y="15" fill="#f1f5f9" font-family="sans-serif" font-size="14" font-weight="600">Check Every Bulb with a Helper</text>
+      <text x="40" y="33" fill="#94a3b8" font-family="sans-serif" font-size="12">Reverse, brake, fog &amp; license plate lamps (£2 bulb fix)</text>
+    </g>
+
+    <g transform="translate(30, 200)">
+      <circle cx="15" cy="15" r="14" fill="#065f46" />
+      <text x="15" y="20" fill="#6ee7b7" font-family="sans-serif" font-size="13" text-anchor="middle">✓</text>
+      <text x="40" y="15" fill="#f1f5f9" font-family="sans-serif" font-size="14" font-weight="600">20p Coin Tyre Tread Test</text>
+      <text x="40" y="33" fill="#94a3b8" font-family="sans-serif" font-size="12">Outer band must not be visible across central 3/4</text>
+    </g>
+
+    <g transform="translate(30, 265)">
+      <circle cx="15" cy="15" r="14" fill="#065f46" />
+      <text x="15" y="20" fill="#6ee7b7" font-family="sans-serif" font-size="13" text-anchor="middle">✓</text>
+      <text x="40" y="15" fill="#f1f5f9" font-family="sans-serif" font-size="14" font-weight="600">Clear Clutter &amp; Check Belts</text>
+      <text x="40" y="33" fill="#94a3b8" font-family="sans-serif" font-size="12">Boot must open, rear seatbelts clicked in, horn working</text>
+    </g>
+
+    <rect x="30" y="330" width="400" height="36" rx="8" fill="#14532d" />
+    <text x="230" y="353" fill="#bbf7d0" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle">Average savings on avoidable retests: £45 - £120</text>
+  </g>
+</svg>

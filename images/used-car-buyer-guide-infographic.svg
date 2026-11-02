@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1727" />
+      <stop offset="100%" stop-color="#1b2a47" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg4)" />
+
+  <text x="80" y="65" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="700" letter-spacing="2">SMART BUYER ROADMAP</text>
+  <text x="80" y="110" fill="#ffffff" font-family="sans-serif" font-size="34" font-weight="800">Used Car Purchase &amp; MOT Verification Workflow</text>
+  <text x="80" y="145" fill="#94a3b8" font-family="sans-serif" font-size="16">Six mandatory forensic check stages before transferring funds to a private or trade seller in Great Britain</text>
+
+  <!-- Flowchart 6 Steps -->
+  <!-- Step 1 -->
+  <g transform="translate(80, 190)">
+    <rect width="165" height="360" rx="14" fill="#152238" stroke="#334155" stroke-width="1.5" />
+    <circle cx="82" cy="50" r="24" fill="#1e3a8a" />
+    <text x="82" y="58" fill="#93c5fd" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">01</text>
+    <text x="82" y="105" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">MOT History</text>
+    <text x="15" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">
+      <tspan x="15" dy="0">• Enter reg plate</tspan>
+      <tspan x="15" dy="20">• Check fail history</tspan>
+      <tspan x="15" dy="20">• Read recurring</tspan>
+      <tspan x="15" dy="18">  advisories</tspan>
+      <tspan x="15" dy="20">• Verify corrosion</tspan>
+      <tspan x="15" dy="18">  notes on sills</tspan>
+    </text>
+    <rect x="15" y="295" width="135" height="30" rx="6" fill="#0369a1" />
+    <text x="82" y="315" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Free DVSA Check</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(265, 190)">
+    <rect width="165" height="360" rx="14" fill="#152238" stroke="#334155" stroke-width="1.5" />
+    <circle cx="82" cy="50" r="24" fill="#1e3a8a" />
+    <text x="82" y="58" fill="#93c5fd" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">02</text>
+    <text x="82" y="105" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">V5C Logbook</text>
+    <text x="15" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">
+      <tspan x="15" dy="0">• Match VIN chassis</tspan>
+      <tspan x="15" dy="20">• Check registered</tspan>
+      <tspan x="15" dy="18">  keeper address</tspan>
+      <tspan x="15" dy="20">• Look for genuine</tspan>
+      <tspan x="15" dy="18">  watermark logo</tspan>
+      <tspan x="15" dy="20">• Number of owners</tspan>
+    </text>
+    <rect x="15" y="295" width="135" height="30" rx="6" fill="#0284c7" />
+    <text x="82" y="315" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Physical Match</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(450, 190)">
+    <rect width="165" height="360" rx="14" fill="#152238" stroke="#334155" stroke-width="1.5" />
+    <circle cx="82" cy="50" r="24" fill="#4338ca" />
+    <text x="82" y="58" fill="#c7d2fe" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">03</text>
+    <text x="82" y="105" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">HPI &amp; Finance</text>
+    <text x="15" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">
+      <tspan x="15" dy="0">• Outstanding loans</tspan>
+      <tspan x="15" dy="20">• Insurance write-off</tspan>
+      <tspan x="15" dy="18">  (Cat S, N, C, D)</tspan>
+      <tspan x="15" dy="20">• Stolen vehicle register</tspan>
+      <tspan x="15" dy="20">• Scrapped status</tspan>
+    </text>
+    <rect x="15" y="295" width="135" height="30" rx="6" fill="#4f46e5" />
+    <text x="82" y="315" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Background Report</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(635, 190)">
+    <rect width="165" height="360" rx="14" fill="#152238" stroke="#334155" stroke-width="1.5" />
+    <circle cx="82" cy="50" r="24" fill="#047857" />
+    <text x="82" y="58" fill="#a7f3d0" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">04</text>
+    <text x="82" y="105" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Cold Inspection</text>
+    <text x="15" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">
+      <tspan x="15" dy="0">• Cold engine start</tspan>
+      <tspan x="15" dy="20">• Oil cap mayo / sludge</tspan>
+      <tspan x="15" dy="20">• Exhaust smoke colour</tspan>
+      <tspan x="15" dy="20">• Tyre tread depth &amp;</tspan>
+      <tspan x="15" dy="18">  uneven wear</tspan>
+    </text>
+    <rect x="15" y="295" width="135" height="30" rx="6" fill="#059669" />
+    <text x="82" y="315" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Physical Test</text>
+  </g>
+
+  <!-- Step 5 -->
+  <g transform="translate(820, 190)">
+    <rect width="165" height="360" rx="14" fill="#152238" stroke="#334155" stroke-width="1.5" />
+    <circle cx="82" cy="50" r="24" fill="#b45309" />
+    <text x="82" y="58" fill="#fde68a" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">05</text>
+    <text x="82" y="105" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Road Test</text>
+    <text x="15" y="135" fill="#94a3b8" font-family="sans-serif" font-size="12">
+      <tspan x="15" dy="0">• Gearbox shift smoothness</tspan>
+      <tspan x="15" dy="20">• Clutch bite point</tspan>
+      <tspan x="15" dy="20">• Emergency stop pull</tspan>
+      <tspan x="15" dy="20">• Steering alignment &amp;</tspan>
+      <tspan x="15" dy="18">  vibrations</tspan>
+    </text>
+    <rect x="15" y="295" width="135" height="30" rx="6" fill="#d97706" />
+    <text x="82" y="315" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Dynamic Drive</text>
+  </g>
+
+  <!-- Step 6 -->
+  <g transform="translate(1005, 190)">
+    <rect width="115" height="360" rx="14" fill="#152238" stroke="#10b981" stroke-width="2" />
+    <circle cx="57" cy="50" r="24" fill="#065f46" />
+    <text x="57" y="58" fill="#6ee7b7" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">06</text>
+    <text x="57" y="105" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Tax &amp; Transfer</text>
+    <text x="10" y="135" fill="#94a3b8" font-family="sans-serif" font-size="11">
+      <tspan x="10" dy="0">• Online V5C transfer</tspan>
+      <tspan x="10" dy="20">• Instant Road Tax pay</tspan>
+      <tspan x="10" dy="20">• Insurance cover active</tspan>
+      <tspan x="10" dy="20">• Drive away legally</tspan>
+    </text>
+    <rect x="10" y="295" width="95" height="30" rx="6" fill="#10b981" />
+    <text x="57" y="315" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Legal Pass</text>
+  </g>
+</svg>
