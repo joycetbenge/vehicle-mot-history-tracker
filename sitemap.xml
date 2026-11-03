@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://joycetbenge.github.io/vehicle-mot-history-tracker/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://joycetbenge.github.io/vehicle-mot-history-tracker/images/uk-mot-system-overview.svg</image:loc>
+      <image:title>UK Vehicle MOT Testing Architecture and Defect Categorisation Matrix</image:title>
+      <image:caption>Official DVSA Vehicle Defect Categorisation and Legal Severity Guide</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://joycetbenge.github.io/vehicle-mot-history-tracker/images/mot-test-inspection-checklist.svg</image:loc>
+      <image:title>Essential MOT Inspection Zones and Checkpoints Blueprint</image:title>
+      <image:caption>Technical architecture of the 6 UK MOT vehicle inspection zones</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://joycetbenge.github.io/vehicle-mot-history-tracker/images/odometer-mileage-fraud-tracker.svg</image:loc>
+      <image:title>Odometer Clocking and Mileage Discrepancy Analysis</image:title>
+      <image:caption>Forensic mileage trajectory tracking and odometer fraud detection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://joycetbenge.github.io/vehicle-mot-history-tracker/images/used-car-buyer-guide-infographic.svg</image:loc>
+      <image:title>Used Car Purchase and MOT Verification Workflow</image:title>
+      <image:caption>Six-stage due diligence verification roadmap for UK car buyers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://joycetbenge.github.io/vehicle-mot-history-tracker/images/dvla-tax-mot-status-workflow.svg</image:loc>
+      <image:title>The MOT Road Tax and Insurance Legal Compliance Triangle</image:title>
+      <image:caption>Legal interdependence between MOT, VED Road Tax, SORN, and ANPR enforcement</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://joycetbenge.github.io/vehicle-mot-history-tracker/images/pre-mot-pass-rate-optimization.svg</image:loc>
+      <image:title>Top MOT Failure Distribution and DIY Prevention Checklist</image:title>
+      <image:caption>UK MOT failure root causes and 5-minute pre-test fixes</image:caption>
+    </image:image>
+  </url>
+</urlset>
