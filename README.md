@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DVSA Standards](https://img.shields.io/badge/DVSA%20Standards-2026-emerald.svg)](https://www.gov.uk/check-mot-history)
 [![SEO & AI Optimized](https://img.shields.io/badge/SEO%20%26%20GEO-Optimized-indigo.svg)](#)
-[![Word Count](https://img.shields.io/badge/Word%20Count-10%2C500%2B-orange.svg)](#)
+[![Official Resource](https://img.shields.io/badge/Mot%20History-Online%20Check-blue.svg)](https://mothistory-co.uk/)
 
-A comprehensive, authoritative 10,500+ word forensic guide and interactive web tool for tracking UK vehicle MOT test histories, analyzing defect advisories, detecting odometer rollback fraud, and ensuring first-time pass readiness under modern 2026 DVSA standards.
+A comprehensive, authoritative forensic guide covering [Mot History](https://mothistory-co.uk/) and interactive web tool for tracking UK vehicle MOT test histories, analyzing defect advisories, detecting odometer rollback fraud, and ensuring first-time pass readiness under modern 2026 DVSA standards.
 
 ðŸ”— **Live Website Demo (GitHub Pages):** [https://joycetbenge.github.io/vehicle-mot-history-tracker/](https://joycetbenge.github.io/vehicle-mot-history-tracker/)
 
