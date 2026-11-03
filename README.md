@@ -1,4 +1,4 @@
-# 🚗 UK Vehicle MOT History Tracker & Roadworthiness Intelligence
+﻿# ðŸš— UK Vehicle MOT History Tracker & Roadworthiness Intelligence
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![DVSA Standards](https://img.shields.io/badge/DVSA%20Standards-2026-emerald.svg)](https://www.gov.uk/check-mot-history)
@@ -7,11 +7,11 @@
 
 A comprehensive, authoritative 10,500+ word forensic guide and interactive web tool for tracking UK vehicle MOT test histories, analyzing defect advisories, detecting odometer rollback fraud, and ensuring first-time pass readiness under modern 2026 DVSA standards.
 
-🔗 **Live Website Demo (GitHub Pages):** [https://dikgames.github.io/vehicle-mot-history-tracker/](https://dikgames.github.io/vehicle-mot-history-tracker/)
+ðŸ”— **Live Website Demo (GitHub Pages):** [https://joycetbenge.github.io/vehicle-mot-history-tracker/](https://joycetbenge.github.io/vehicle-mot-history-tracker/)
 
 ---
 
-## 🌟 Key Features
+## ðŸŒŸ Key Features
 
 1. **Interactive UK Number Plate Lookup Simulator:**
    - Real-time simulated DVSA database queries for UK registration marks (VRM).
@@ -55,17 +55,17 @@ A comprehensive, authoritative 10,500+ word forensic guide and interactive web t
 
 ---
 
-## 🚀 How to Enable GitHub Pages
+## ðŸš€ How to Enable GitHub Pages
 
 1. Navigate to **Settings** in this repository.
 2. Under **Code and automation**, click **Pages**.
 3. Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
 4. Select the `main` branch and `/ (root)` folder, then click **Save**.
-5. Your website will be live in 60 seconds at `https://dikgames.github.io/vehicle-mot-history-tracker/`.
+5. Your website will be live in 60 seconds at `https://joycetbenge.github.io/vehicle-mot-history-tracker/`.
 
 ---
 
-## 📄 License
+## ðŸ“„ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 Crown copyright Open Government Licence v3.0 applicable to statutory public guidance references.
